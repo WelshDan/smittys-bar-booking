@@ -25,3 +25,13 @@ header {
 #dropdown {
     float: right;
 }
+
+/* ..... Footer ..... */
+
+footer {
+    font-size: 0.8rem;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
