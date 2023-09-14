@@ -37,3 +37,8 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 ---
 
 Happy coding!
+
+Superuser:
+username: admin
+email: admin@email.com
+Password: September:2023
