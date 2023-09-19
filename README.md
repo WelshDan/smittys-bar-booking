@@ -47,10 +47,9 @@ Email Smittys Bar:
 email: testemailsmittysbar@gmail.com
 password: SmittysBar:2023
 
-
 Bootstrap template:
 Template Name: Restaurantly
 Template URL: <https://bootstrapmade.com/restaurantly-restaurant-template/>
+Link: <https://github.com/technext/restaurantly/releases/download/v1.0/Restaurantly.zip>
 Author: BootstrapMade.com
 License: <https://bootstrapmade.com/license/>
-
