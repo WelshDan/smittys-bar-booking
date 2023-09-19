@@ -42,3 +42,15 @@ Superuser:
 username: admin
 email: admin@email.com
 Password: September:2023
+
+Email Smittys Bar:
+email: testemailsmittysbar@gmail.com
+password: SmittysBar:2023
+
+
+Bootstrap template:
+Template Name: Restaurantly
+Template URL: <https://bootstrapmade.com/restaurantly-restaurant-template/>
+Author: BootstrapMade.com
+License: <https://bootstrapmade.com/license/>
+
