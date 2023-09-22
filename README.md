@@ -53,3 +53,6 @@ Template URL: <https://bootstrapmade.com/restaurantly-restaurant-template/>
 Link: <https://github.com/technext/restaurantly/releases/download/v1.0/Restaurantly.zip>
 Author: BootstrapMade.com
 License: <https://bootstrapmade.com/license/>
+
+
+Test sheet is connected was using data = tables.get_all_values then print(data) to the terminal
