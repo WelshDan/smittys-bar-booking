@@ -20,6 +20,5 @@ from booking.views import get_start_page
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', get_start_page, name='get_start_page'),
-    path('summernote/', include('django_summernote.urls')),
     path('accounts/', include('allauth.urls')),
 ]
