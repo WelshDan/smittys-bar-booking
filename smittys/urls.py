@@ -22,3 +22,7 @@ urlpatterns = [
     path('', get_start_page, name='get_start_page'),
     path('accounts/', include('allauth.urls')),
 ]
+
+admin.site.index_title = "Smitty's Bar & Restaurant"
+admin.site.site_header = "Smitty's Bar & Restaurant Admin"
+admin.site.site_title = "Smitty's Bar & Restaurant Admin"
