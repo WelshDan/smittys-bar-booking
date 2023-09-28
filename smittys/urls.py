@@ -23,6 +23,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
 ]
 
+    # Admin titles and headings"
 admin.site.index_title = "Smitty's Bar & Restaurant"
 admin.site.site_header = "Smitty's Bar & Restaurant Admin"
 admin.site.site_title = "Smitty's Bar & Restaurant Admin"
