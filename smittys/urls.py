@@ -15,13 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from booking.views import get_start_page, booktable
+from booking import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', get_start_page, name='get_start_page'),
     path('accounts/', include('allauth.urls')),
-    path('booktable/', booktable, name='booktable')
+    path('', views.get_indexpage, name='indexpage'),
+    path('booktable/', views.get_booktable, name='booktable'),
+    path('basepage/', views.get_basepage, name='basepage')
 ]
 
 # Admin titles and headings"

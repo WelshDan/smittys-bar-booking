@@ -1,10 +1,13 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
 
 
-def get_start_page(request):
+def get_basepage(request):
     return render(request, 'base.html')
 
 
-def booktable(request):
+def get_booktable(request):
     return render(request, 'booktable.html')
+
+
+def get_indexpage(request):
+    return render(request, 'index.html')
