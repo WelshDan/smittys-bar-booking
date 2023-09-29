@@ -23,7 +23,9 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('booktable/', views.get_booktable, name='booktable'),
     path('base/', views.get_base, name='base'),
-    path('login/', views.get_login, name='login')
+    path('login/', views.get_login, name='login'),
+    path('users/', include('users.urls')),
+    path('users/', include('django.contrib.auth.urls'))
 ]
 
 # Admin titles and headings"
