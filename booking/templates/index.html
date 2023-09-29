@@ -1,5 +1,8 @@
-{% extends 'base.html' %}
-{% block content%}
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
 
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex align-items-center">
@@ -29,7 +32,7 @@
             <div class="row">
                 <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
                     <div class="about-img">
-                        <img src="static/assets/img/about.jpg" alt="">
+                        <img src="{% static 'assets/img/about.jpg' %}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
@@ -148,7 +151,7 @@
                                     </p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="static/assets/img/specials-1.png" alt="" class="img-fluid">
+                                    <img src="{% static 'assets/img/specials-1.png' %}" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -163,7 +166,7 @@
                                     </p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="static/assets/img/specials-2.png" alt="" class="img-fluid">
+                                    <img src="{% static 'assets/img/specials-2.png' %}" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -179,7 +182,7 @@
                                     </p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="static/assets/img/specials-3.png" alt="" class="img-fluid">
+                                    <img src="{% static 'assets/img/specials-3.png' %}" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -195,7 +198,7 @@
                                     </p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="static/assets/img/specials-4.png" alt="" class="img-fluid">
+                                    <img src="{% static 'assets/img/specials-4.png' %}" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -209,7 +212,7 @@
                                     </p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="static/assets/img/specials-5.png" alt="" class="img-fluid">
+                                    <img src="{% static 'assets/img/specials-5.png' %}" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -224,7 +227,7 @@
                                         chicken wings. Extras include a range of vegetables and sauces.</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="static/assets/img/specials-5.png" alt="" class="img-fluid">
+                                    <img src="{% static 'assets/img/specials-5.png' %}" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -260,7 +263,7 @@
             <div class="row drinks-container" data-aos="fade-up" data-aos-delay="200">
 
                 <div class="col-lg-6 drinks-item filter-beers">
-                    <img src="static/assets/img/menu/lobster-bisque.jpg" class="drinks-img" alt="">
+                    <img src="{% static 'assets/img/menu/lobster-bisque.jpg' %}" class="drinks-img" alt="">
                     <div class="drinks-content">
                         <a href="#">Guinness</a><span>89kr pint (49 half pint)</span>
                     </div>
@@ -270,7 +273,7 @@
                 </div>
 
                 <div class="col-lg-6 drinks-item filter-beers">
-                    <img src="static/assets/img/menu/lobster-bisque.jpg" class="drinks-img" alt="">
+                    <img src="{% static 'assets/img/menu/lobster-bisque.jpg' %}" class="drinks-img" alt="">
                     <div class="drinks-content">
                         <a href="#">Ales, IPAs & Stouts</a><span>89kr pint (49 half pint)</span>
                     </div>
@@ -280,7 +283,7 @@
                 </div>
 
                 <div class="col-lg-6 drinks-item filter-ciders">
-                    <img src="static/assets/img/menu/bread-barrel.jpg" class="drinks-img" alt="">
+                    <img src="{% static 'assets/img/menu/bread-barrel.jpg' %}" class="drinks-img" alt="">
                     <div class="drinks-content">
                         <a href="#">Ciders</a><span>$6.95</span>
                     </div>
@@ -290,7 +293,7 @@
                 </div>
 
                 <div class="col-lg-6 drinks-item filter-wines">
-                    <img src="static/assets/img/menu/cake.jpg" class="drinks-img" alt="">
+                    <img src="{% static 'assets/img/menu/cake.jpg' %}" class="drinks-img" alt="">
                     <div class="drinks-content">
                         <a href="#">Crab Cake</a><span>$7.95</span>
                     </div>
@@ -300,7 +303,7 @@
                 </div>
 
                 <div class="col-lg-6 drinks-item filter-soft">
-                    <img src="static/assets/img/menu/caesar.jpg" class="drinks-img" alt="">
+                    <img src="{% static 'assets/img/menu/caesar.jpg' %}" class="drinks-img" alt="">
                     <div class="drinks-content">
                         <a href="#">Caesar Selections</a><span>$8.95</span>
                     </div>
@@ -310,7 +313,7 @@
                 </div>
 
                 <div class="col-lg-6 drinks-item filter-specialty">
-                    <img src="static/assets/img/menu/tuscan-grilled.jpg" class="drinks-img" alt="">
+                    <img src="{% static 'assets/img/menu/tuscan-grilled.jpg' %}" class="drinks-img" alt="">
                     <div class="drinks-content">
                         <a href="#">Tuscan Grilled</a><span>$9.95</span>
                     </div>
@@ -320,7 +323,7 @@
                 </div>
 
                 <div class="col-lg-6 drinks-item filter-starters">
-                    <img src="static/assets/img/menu/mozzarella.jpg" class="drinks-img" alt="">
+                    <img src="{% static 'assets/img/menu/mozzarella.jpg' %}" class="drinks-img" alt="">
                     <div class="drinks-content">
                         <a href="#">Mozzarella Stick</a><span>$4.95</span>
                     </div>
@@ -330,7 +333,7 @@
                 </div>
 
                 <div class="col-lg-6 drinks-item filter-salads">
-                    <img src="static/assets/img/menu/greek-salad.jpg" class="drinks-img" alt="">
+                    <img src="{% static 'assets/img/menu/greek-salad.jpg' %}" class="drinks-img" alt="">
                     <div class="drinks-content">
                         <a href="#">Greek Salad</a><span>$9.95</span>
                     </div>
@@ -340,7 +343,7 @@
                 </div>
 
                 <div class="col-lg-6 drinks-item filter-salads">
-                    <img src="static/assets/img/menu/spinach-salad.jpg" class="drinks-img" alt="">
+                    <img src="{% static 'assets/img/menu/spinach-salad.jpg' %}" class="drinks-img" alt="">
                     <div class="drinks-content">
                         <a href="#">Spinach Salad</a><span>$9.95</span>
                     </div>
@@ -350,7 +353,7 @@
                 </div>
 
                 <div class="col-lg-6 drinks-item filter-specialty">
-                    <img src="static/assets/img/menu/lobster-roll.jpg" class="drinks-img" alt="">
+                    <img src="{% static 'assets/img/menu/lobster-roll.jpg' %}" class="drinks-img" alt="">
                     <div class="drinks-content">
                         <a href="#">Lobster Roll</a><span>$12.95</span>
                     </div>
@@ -380,7 +383,7 @@
                     <div class="swiper-slide">
                         <div class="row event-item">
                             <div class="col-lg-6">
-                                <img src="static/assets/img/event-birthday.jpg" class="img-fluid" alt="">
+                                <img src="{% static 'assets/img/event-birthday.jpg' %}" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 content">
                                 <h3>Pub Quiz</h3>
@@ -410,7 +413,7 @@
                     <div class="swiper-slide">
                         <div class="row event-item">
                             <div class="col-lg-6">
-                                <img src="static/assets/img/event-private.jpg" class="img-fluid" alt="">
+                                <img src="{% static 'assets/img/event-private.jpg' %}" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 content">
                                 <h3>Live Music</h3>
@@ -446,7 +449,7 @@
                     <div class="swiper-slide">
                         <div class="row event-item">
                             <div class="col-lg-6">
-                                <img src="static/assets/img/event-custom.jpg" class="img-fluid" alt="">
+                                <img src="{% static 'assets/img/event-custom.jpg' %}" class="img-fluid" alt="">
                             </div>
                             <div class="col-lg-6 pt-4 pt-lg-0 content">
                                 <h3>Stand Up</h3>
@@ -498,72 +501,72 @@
 
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                        <a href="static/assets/img/gallery/gallery-1.jpg" class="gallery-lightbox"
+                        <a href="{% static 'assets/img/gallery/gallery-1.jpg' %}" class="gallery-lightbox"
                             data-gall="gallery-item">
-                            <img src="static/assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+                            <img src="{% static 'assets/img/gallery/gallery-1.jpg' %}" alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                        <a href="static/assets/img/gallery/gallery-2.jpg" class="gallery-lightbox"
+                        <a href="{% static 'assets/img/gallery/gallery-2.jpg' %}" class="gallery-lightbox"
                             data-gall="gallery-item">
-                            <img src="static/assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+                            <img src="{% static 'assets/img/gallery/gallery-2.jpg' %}" alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                        <a href="static/assets/img/gallery/gallery-3.jpg" class="gallery-lightbox"
+                        <a href="{% static 'assets/img/gallery/gallery-3.jpg' %}" class="gallery-lightbox"
                             data-gall="gallery-item">
-                            <img src="static/assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+                            <img src="{% static 'assets/img/gallery/gallery-3.jpg' %}" alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                        <a href="static/assets/img/gallery/gallery-4.jpg" class="gallery-lightbox"
+                        <a href="{% static 'assets/img/gallery/gallery-4.jpg' %}"  class="gallery-lightbox"
                             data-gall="gallery-item">
-                            <img src="static/assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+                            <img src="{% static 'assets/img/gallery/gallery-4.jpg' %}"  alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                        <a href="static/assets/img/gallery/gallery-5.jpg" class="gallery-lightbox"
+                        <a href="{% static 'assets/img/gallery/gallery-5.jpg' %}"  class="gallery-lightbox"
                             data-gall="gallery-item">
-                            <img src="static/assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+                            <img src="{% static 'assets/img/gallery/gallery-5.jpg' %}"  alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                        <a href="static/assets/img/gallery/gallery-6.jpg" class="gallery-lightbox"
+                        <a href="{% static 'assets/img/gallery/gallery-6.jpg' %}"  class="gallery-lightbox"
                             data-gall="gallery-item">
-                            <img src="static/assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+                            <img src="{% static 'assets/img/gallery/gallery-6.jpg' %}"  alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                        <a href="static/assets/img/gallery/gallery-7.jpg" class="gallery-lightbox"
+                        <a href="{% static 'assets/img/gallery/gallery-7.jpg' %}"  class="gallery-lightbox"
                             data-gall="gallery-item">
-                            <img src="static/assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+                            <img src="{% static 'assets/img/gallery/gallery-7.jpg' %}"  alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                        <a href="static/assets/img/gallery/gallery-8.jpg" class="gallery-lightbox"
+                        <a href="{% static 'assets/img/gallery/gallery-8.jpg' %}"  class="gallery-lightbox"
                             data-gall="gallery-item">
-                            <img src="static/assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+                            <img src="{% static 'assets/img/gallery/gallery-8.jpg' %}"  alt="" class="img-fluid">
                         </a>
                     </div>
                 </div>
