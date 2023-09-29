@@ -58,4 +58,4 @@ Test sheet is connected was using data = tables.get_all_values then print(data) 
 
 Help installing allauth: <https://www.google.com/search?sca_esv=567555228&rlz=1C1CHBD_svSE1043SE1044&q=linking+django+allauth&tbm=vid&source=lnms&sa=X&ved=2ahUKEwjFjeKh9b2BAxUbRvEDHSdhA7MQ0pQJegQIChAB&biw=1536&bih=735&dpr=1.25#fpstate=ive&vld=cid:54078088>,vid:RyB_wdEZhOw,st:0
 
-pictures takebn frm https://pixabay.com/
+pictures taken frm <https://pixabay.com/>
