@@ -1592,15 +1592,15 @@ section {
     left: 10px;
 }
 
-.login .php-email-form {
+.login .login-form {
     width: 100%;
 }
 
-.login .php-email-form .form-group {
+.login .login-form .form-group {
     padding-bottom: 8px;
 }
 
-.login .php-email-form .validate {
+.login .login-form .validate {
     display: none;
     color: red;
     margin: 0 0 15px 0;
@@ -1608,7 +1608,7 @@ section {
     font-size: 13px;
 }
 
-.login .php-email-form .error-message {
+.login .login-form .error-message {
     display: none;
     color: #fff;
     background: #ed3c0d;
@@ -1617,11 +1617,11 @@ section {
     font-weight: 600;
 }
 
-.login .php-email-form .error-message br+br {
+.login .login-form .error-message br+br {
     margin-top: 25px;
 }
 
-.login .php-email-form .sent-message {
+.login .login-form .sent-message {
     display: none;
     color: #fff;
     background: #18d26e;
@@ -1630,13 +1630,13 @@ section {
     font-weight: 600;
 }
 
-.login .php-email-form .loading {
+.login .login-form .loading {
     display: none;
     text-align: center;
     padding: 15px;
 }
 
-.login .php-email-form .loading:before {
+.login .login-form .loading:before {
     content: "";
     display: inline-block;
     border-radius: 50%;
@@ -1648,8 +1648,8 @@ section {
     animation: animate-loading 1s linear infinite;
 }
 
-.login .php-email-form input,
-.login .php-email-form textarea {
+.login .login-form input,
+.login .login-form textarea {
     border-radius: 0;
     box-shadow: none;
     font-size: 14px;
@@ -1658,30 +1658,30 @@ section {
     color: white;
 }
 
-.login .php-email-form input::-moz-placeholder,
-.login .php-email-form textarea::-moz-placeholder {
+.login .login-form input::-moz-placeholder,
+.login .login-form textarea::-moz-placeholder {
     color: #a49b89;
 }
 
-.login .php-email-form input::placeholder,
-.login .php-email-form textarea::placeholder {
+.login .login-form input::placeholder,
+.login .login-form textarea::placeholder {
     color: #a49b89;
 }
 
-.login .php-email-form input:focus,
-.login .php-email-form textarea:focus {
+.login .login-form input:focus,
+.login .login-form textarea:focus {
     border-color: #cda45e;
 }
 
-.login .php-email-form input {
+.login .login-form input {
     height: 44px;
 }
 
-.login .php-email-form textarea {
+.login .login-form textarea {
     padding: 10px 12px;
 }
 
-.login .php-email-form button[type=submit] {
+.login .login-form button[type=submit] {
     background: #cda45e;
     border: 0;
     padding: 10px 35px;
@@ -1690,7 +1690,7 @@ section {
     border-radius: 50px;
 }
 
-.login .php-email-form button[type=submit]:hover {
+.login .login-form button[type=submit]:hover {
     background: #d3af71;
 }
 
