@@ -38,6 +38,13 @@
                 <div class="error-message">Please enter a valid username and password</div>
                 <div class="sent-message"></div>
             </div>
+            <div class="container">
+                {% if messages %}
+                {% for message in messages %}
+                {{ message }}
+                {% endfor %}
+                {% endif %}
+            </div>
             <div class="section-title">
                 <p>or click to sign up</p>
             </div>

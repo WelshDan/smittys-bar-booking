@@ -35,6 +35,14 @@
 </head>
 
 <body>
+    <!-- ======= Error Messages ======= -->
+    <div class="container">
+        {% if messages %}
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+        {% endif %}
+    </div>
 
     <!-- ======= Top Bar ======= -->
     <div id="topbar" class="d-flex align-items-center fixed-top">
@@ -72,7 +80,8 @@
             <a href="{% url 'login' %}" class="login-btn scrollto d-none d-lg-flex">Login</a>
 
         </div>
-    </header><!-- End Header -->
+    </header>
+    <!-- End Header -->
 
     {% block content %}
     {% endblock %}
