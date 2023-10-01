@@ -11,16 +11,16 @@
 
         <div class="section-title">
             <h2>Log in</h2>
-            <p>Enter your username and password</p>
+            <p>Enter your email address and password</p>
         </div>
         <br>
         <form action="" method="POST" class="login-form" data-aos="fade-up" data-aos-delay="100">
             {% csrf_token %}
             <div class="row">
                 <div class="col-lg-4 col-md-4 form-group">
-                    <label for="enterUsername" class="form-label"></label>
-                    <input type="username" name="username" class="form-control" id="username"
-                        placeholder="Your Username" data-rule="minlen:4" data-msg="Please enter your username">
+                    <label for="enterEmail" class="form-label"></label>
+                    <input type="text" name="email" class="form-control" id="email" aria-describedby="enterEmail"
+                        placeholder="Your Email" data-rule="minlen:4" data-msg="Please enter your email address">
                     <div class="validate"></div>
                 </div>
                 <div class="col-lg-4 col-md-4 form-group mt-3 mt-md-0">
@@ -32,28 +32,22 @@
                 <div class="col-lg-2 col-md-2 form-group bt-submit animated fadeInUp scrollto text-center"><button
                         type="submit">Submit</button>
                 </div>
-            </div>
-            <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message">Please enter a valid username and password</div>
-                <div class="sent-message"></div>
-            </div>
-            <div class="container">
-                {% if messages %}
-                {% for message in messages %}
-                {{ message }}
-                {% endfor %}
-                {% endif %}
+                <!-- ======= Error Messages ======= -->
+                <div class="container">
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div class="error-message d-block" role="alert"></div>
+                    {{ message }}
+                    {% endfor %}
+                    {% endif %}
+                </div>
             </div>
             <div class="section-title">
                 <p>or click to sign up</p>
             </div>
             <div class="bt-signup animated fadeInUp scrollto text-center"><button type="submit">Sign up</button>
             </div>
-    </div>
-
-    </form>
-
+        </form>
     </div>
 </section>
 {% endblock %}
