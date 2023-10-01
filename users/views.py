@@ -8,13 +8,19 @@ def login_user(request):
         email = request.POST["email"]
         password = request.POST["password"]
         user = authenticate(request, email=email, password=password)
-        
+
         if user is not None:
             login(request, user)
-            return redirect('index.html')
+            return redirect('index')
         else:
             messages.success(request, ("That did not work! Try again please"))
-            return redirect('login.html')
+            return redirect('login')
 
     else:
         return render(request, 'authenticate/login.html', {})
+
+
+def logout_user(request):
+    logout(request)
+    messages.success(request, ("You are now logged out"))
+    return redirect('index')

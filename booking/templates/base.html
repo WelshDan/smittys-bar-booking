@@ -70,8 +70,11 @@
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
             <!-- .navbar -->
+            {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}" class="login-btn scrollto d-none d-lg-flex">Logout</a>
+            {% else %}
             <a href="{% url 'login' %}" class="login-btn scrollto d-none d-lg-flex">Login</a>
-
+            {% endif %}
         </div>
     </header>
     <!-- End Header -->
