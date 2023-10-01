@@ -22,6 +22,7 @@ urlpatterns = [
     path('', views.get_index, name='index'),
     path('booktable/', views.get_booktable, name='booktable'),
     path('base/', views.get_base, name='base'),
+    path('signup/', views.get_signup, name='signup'),
     path('users/', include('users.urls')),
     path('users/', include('django.contrib.auth.urls')),
     path('users/', include('allauth.urls'))

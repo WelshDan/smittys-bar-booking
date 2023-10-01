@@ -11,3 +11,7 @@ def get_booktable(request):
 
 def get_index(request):
     return render(request, 'index.html')
+
+
+def get_signup(request):
+    return render(request, 'signup.html')
