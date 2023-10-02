@@ -28,10 +28,10 @@ def logout_user(request):
 
 
 def signup_user(request):
-    if request.method == "GET":
+    if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
-            user = form.save()
+            form.save()
             login(request, user)
             messages.success(request, ("Sign up successful!"))
             return redirect('index.html')
