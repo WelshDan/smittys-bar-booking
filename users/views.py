@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from django.contrib.auth.forms import UserCreationForm
+from .forms import RegisterForm
 
 
 def login_user(request):
@@ -18,7 +18,7 @@ def login_user(request):
             return redirect('login')
 
     else:
-        return render(request, 'authenticate/login.html', {})
+        return render(request, 'registration/login.html', {})
 
 
 def logout_user(request):
@@ -28,17 +28,13 @@ def logout_user(request):
 
 
 def signup_user(request):
-    if request.method == "POST":
-        form = UserCreationForm(request.POST)
+    if request.method == "GET":
+        form = RegisterForm(request.POST)
         if form.is_valid():
-            form.save()
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password1']
-            user = authenticate(username=username, password=password)
+            user = form.save()
             login(request, user)
             messages.success(request, ("Sign up successful!"))
-            return rediect('index')
+            return redirect('index.html')
     else:
-        form = UserCreationForm()
-
+        form = RegisterForm()
     return render(request, 'registration/signup.html', {'form': form, })

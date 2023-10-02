@@ -61,4 +61,7 @@ Help installing allauth: <https://www.google.com/search?sca_esv=567555228&rlz=1C
 pictures taken frm <https://pixabay.com/>
 
 Help with authentication upon login:
-https://docs.djangoproject.com/en/4.2/topics/auth/default/#auth-web-requests
+<https://docs.djangoproject.com/en/4.2/topics/auth/default/#auth-web-requests>
+
+Help with signup:
+<https://reintech.io/blog/writing-a-custom-signup-form-in-django>
