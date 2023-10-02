@@ -14,4 +14,4 @@ def get_index(request):
 
 
 def get_signup(request):
-    return render(request, 'registration/signup.html')
+    return render(request, 'signup.html')

@@ -514,7 +514,7 @@ h6 {
 }
 
 #hero .btn-login,
-#hero .btn-booktable {
+#hero .btn-signup {
     font-weight: 600;
     font-size: 13px;
     letter-spacing: 0.5px;
@@ -529,7 +529,7 @@ h6 {
 }
 
 #hero .btn-login:hover,
-#hero .btn-booktable:hover {
+#hero .btn-signup:hover {
     background: #cda45e;
     color: #fff;
 }
@@ -1533,7 +1533,7 @@ section {
     padding-top: 60px;
 }
 
-.login .bt-signup {
+.login .bt-login {
     position: absolute;
     left: 10px;
 }
@@ -1657,7 +1657,144 @@ section {
 }
 
 .login .btn-login:hover,
-.login .btn-signup,
+.login .btn-signup:hover,
+.login .btn-booktable:hover {
+    background: #cda45e;
+    color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Sign up Page
+--------------------------------------------------------------*/
+.signup .section-title {
+    padding-top: 60px;
+}
+
+.signup .bt-signup {
+    position: absolute;
+    left: 10px;
+}
+
+.signup .signup-form {
+    width: 100%;
+}
+
+.signup .signup-form .form-group {
+    padding-bottom: 8px;
+}
+
+.signup .signup-form .validate {
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.signup .signup-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.signup .signup-form .error-message br+br {
+    margin-top: 25px;
+}
+
+.signup .signup-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.signup .signup-form .loading {
+    display: none;
+    text-align: center;
+    padding: 15px;
+}
+
+.signup .signup-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #cda45e;
+    border-top-color: #1a1814;
+    animation: animate-loading 1s linear infinite;
+}
+
+.signup .signup-form input,
+.signup .signup-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    background: #0c0b09;
+    border-color: #625b4b;
+    color: white;
+}
+
+.signup .losignupgin-form input::-moz-placeholder,
+.signup .signup-form textarea::-moz-placeholder {
+    color: #a49b89;
+}
+
+.signup .signup-form input::placeholder,
+.signup .signup-form textarea::placeholder {
+    color: #a49b89;
+}
+
+.signup .signup-form input:focus,
+.signup .signup-form textarea:focus {
+    border-color: #cda45e;
+}
+
+.signup .signup-form input {
+    height: 44px;
+}
+
+.signup .signup-form textarea {
+    padding: 10px 12px;
+}
+
+.signup .signup-form button[type=submit] {
+    background: #cda45e;
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.signup .signup-form button[type=submit]:hover {
+    background: #d3af71;
+}
+
+.signup .btn-login,
+.signup .btn-signup,
+.signup .btn-booktable {
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+    line-height: 1;
+    color: white;
+    border: 2px solid #cda45e;
+}
+
+.login .btn-login:hover,
+.login .btn-signup:hover,
 .login .btn-booktable:hover {
     background: #cda45e;
     color: #fff;

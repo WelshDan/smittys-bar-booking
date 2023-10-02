@@ -5,9 +5,8 @@
 {% block content %}
 
 <!-- ======= Log in Section ======= -->
-<br>
 <section id="login" class="login">
-    <div class="container" data-aos="fade-up">
+    <div class="container section" data-aos="fade-up">
 
         <div class="section-title">
             <h2>Log in</h2>
@@ -34,22 +33,28 @@
                         type="submit">Submit</button>
                 </div>
                 <!-- ======= Error Messages ======= -->
-                {% if messages %}
                 <div class="container">
+                    {% if messages %}
                     {% for message in messages %}
-                    <div class="error-message d-block" role="alert"></div>
-                    {{ message }}
-                    {% endfor %}
 
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    {% endfor %}
+                    {% endif %}
                 </div>
-                {% endif %}
+                <div class="section-title">
+                    <p>or click to sign up</p>
+                </div>
+                <div class="btns">
+                    <a href="{% url 'signup' %}" class="btn-signup animated fadeInUp scrollto">Sign Up</a>
+                </div>
             </div>
-            <div class="section-title">
-                <p>or click to sign up</p>
-            </div>
-            <a href="{% url 'signup' %}" class="btn-signup animated fadeInUp scrollto">Sign Up</a>
-    </div>
-    </form>
+        </form>
     </div>
 </section>
 {% endblock %}
