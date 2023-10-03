@@ -15,3 +15,7 @@ def get_index(request):
 
 def get_signup(request):
     return render(request, 'signup.html')
+
+
+def get_login(request):
+    return render(request, 'login.html')

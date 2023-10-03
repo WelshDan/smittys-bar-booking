@@ -5,16 +5,18 @@ from .forms import RegisterForm
 
 
 def login_user(request):
+    # Check if logged in
     if request.method == "POST":
-        username = request.POST["username"]
+        email = request.POST["email"]
         password = request.POST["password"]
-        user = authenticate(request, username=username, password=password)
+        # Authentication
+        user = authenticate(request, email=email, password=password)
 
         if user is not None:
             login(request, user)
-            return redirect('index')
+            return redirect('login')
         else:
-            messages.success(request, ("That did not work! Try again please"))
+            messages.success(request, ("That did not work! Please try again"))
             return redirect('login')
 
     else:

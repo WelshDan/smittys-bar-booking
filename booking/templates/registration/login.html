@@ -1,86 +1,79 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 
-<!-- ======= Log in Section ======= -->
+<!-- ======= Check if logged in ======= -->
+{% if user.is_authenticated %}
+
 <section id="login" class="login">
-  <div class="container section" data-aos="fade-up">
-    <div class="section-title">
-      <h2>Log in</h2>
-      <p>Enter your email address and password</p>
-    </div>
-    <br />
-
-    <form
-      action=""
-      method="POST"
-      class="login-form"
-      data-aos="fade-up"
-      data-aos-delay="100"
-    >
-      {% csrf_token %}
-      <div class="row">
-        <div class="col-lg-4 col-md-4 form-group">
-          <label for="enterUsername" class="form-label"></label>
-          <input
-            type="text"
-            name="username"
-            class="form-control"
-            aria-describedby="enterUsername"
-            placeholder="Your Email"
-            data-rule="minlen:4"
-            data-msg="Please enter your email address"
-          />
-          <div class="validate"></div>
-        </div>
-        <div class="col-lg-4 col-md-4 form-group mt-3 mt-md-0">
-          <label for="enterPassword" class="form-label"></label>
-          <input
-            type="password"
-            class="form-control"
-            name="password"
-            placeholder="Your Password"
-            data-rule="password"
-            data-msg="Please enter your password"
-          />
-          <div class="validate"></div>
-        </div>
-        <div
-          class="col-lg-2 col-md-2 form-group bt-submit animated fadeInUp scrollto text-center"
-        >
-          <button type="submit">Submit</button>
-        </div>
-        <!-- ======= Error Messages ======= -->
-        <div class="container">
-          {% if messages %} {% for message in messages %}
-
-          <div
-            class="alert alert-warning alert-dismissible fade show"
-            role="alert"
-          >
-            {{ message }}
-            <button
-              type="button"
-              class="close"
-              data-dismiss="alert"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-
-          {% endfor %} {% endif %}
+    <div class="container section" data-aos="fade-up">
+        <div class="section-title">
+            <h2>You are now logged in!</h2>
+            <p>Click to book a table</p>
+            <div class="btns">
+                <a href="{% url 'booktable' %}" class="btn-login animated fadeInUp scrollto">Book a Table</a>
+            </div>
         </div>
         <div class="section-title">
-          <p>or click to sign up</p>
+            <h2>Log out</h2>
+            <p>Click here to log out</p>
         </div>
-        <div class="btns">
-          <a
-            href="{% url 'signup' %}"
-            class="btn-signup animated fadeInUp scrollto"
-            >Sign Up</a
-          >
-        </div>
-      </div>
-    </form>
-  </div>
+    </div>
 </section>
+
+<div class="btns">
+    <a href="{% url 'logout' %}" class="btn-signup animated fadeInUp scrollto">Sign Up</a>
+</div>
+
+{% else %}
+
+<!-- ======= Log in Section ======= -->
+<section id="login" class="login">
+    <div class="container section" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Log in</h2>
+            <p>Enter your email address and password</p>
+        </div>
+        <br />
+
+        <form action="{% url 'index' %}" method="POST" class="login-form" data-aos="fade-up" data-aos-delay="100">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-lg-4 col-md-4 form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Email" data-rule="minlen:4"
+                        data-msg="Please enter your email address" required />
+                    <div class="validate"></div>
+                </div>
+                <div class="col-lg-4 col-md-4 form-group mt-3 mt-md-0">
+                    <input type="password" class="form-control" name="password" placeholder="Password"
+                        data-rule="password" data-msg="Please enter your password" required />
+                    <div class="validate"></div>
+                </div>
+                <div class="col-lg-2 col-md-2 form-group bt-submit animated fadeInUp scrollto text-center">
+                    <button type="submit">Submit</button>
+                </div>
+                <!-- ======= Error Messages ======= -->
+                <div class="container">
+                    {% if messages %} {% for message in messages %}
+
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    {% endfor %} {% endif %}
+                </div>
+                <div class="section-title">
+                    <div class="signup-title">
+                        <h2>Sign up</h2>
+                        <p>Click here to register</p>
+                    </div>
+                    <div class="btns">
+                        <a href="{% url 'signup' %}" class="btn-signup animated fadeInUp scrollto">Sign Up</a>
+                    </div>
+                </div>
+        </form>
+    </div>
+</section>
+{% endif %}
 {% endblock %}
