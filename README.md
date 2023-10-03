@@ -65,3 +65,6 @@ Help with authentication upon login:
 
 Help with signup:
 <https://reintech.io/blog/writing-a-custom-signup-form-in-django>
+
+Help with postgresql connection:
+<https://www.youtube.com/watch?v=t6RbanOhna4>
