@@ -32,9 +32,12 @@ def signup_user(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            login(request, user)
-            messages.success(request, ("Sign up successful!"))
-            return redirect('index.html')
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+        user = authenticate(request, username=username, password=password)
+        login(request, user)
+        messages.success(request, ("Sign up successful!"))
+        return redirect('index.html')
     else:
         form = RegisterForm()
     return render(request, 'registration/signup.html', {'form': form, })
