@@ -17,12 +17,10 @@
             <p>Click here to log out</p>
         </div>
     </div>
+    <div class="btns">
+        <a href="{% url 'logout' %}" class="btn-signup animated fadeInUp scrollto">Sign Up</a>
+    </div>
 </section>
-
-<div class="btns">
-    <a href="{% url 'logout' %}" class="btn-signup animated fadeInUp scrollto">Sign Up</a>
-</div>
-
 {% else %}
 
 <!-- ======= Log in Section ======= -->
@@ -34,7 +32,7 @@
         </div>
         <br />
 
-        <form action="{% url 'index' %}" method="POST" class="login-form" data-aos="fade-up" data-aos-delay="100">
+        <form action="{% url 'login' %}" method="POST" class="login-form" data-aos="fade-up" data-aos-delay="100">
             {% csrf_token %}
             <div class="row">
                 <div class="col-lg-4 col-md-4 form-group">
