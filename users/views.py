@@ -36,6 +36,7 @@ def signup_user(request):
             user = form.save()
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
+        # Authentication
         user = authenticate(request, username=username, password=password)
         login(request, user)
         messages.success(request, ("Sign up successful!"))

@@ -71,7 +71,7 @@ class Tables(models.Model):
     available = models.BooleanField()
 
 
-class Bookings(models.Model):
+class Reservations(models.Model):
     booking_id = models.IntegerField(primary_key=True)
     date_and_time = models.DateTimeField()
     booking_length = models.DurationField()
