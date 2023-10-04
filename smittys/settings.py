@@ -30,12 +30,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["8000-welshdan-smittys-bar-boo-alf68buf60.us2.codeanyapp.com",
-                 "smittys-bar-booking.herokuapp.com",
-                 "smittys-bar-booking-17a1b4da8e71.herokuapp.com",
-                 "localhost",]
-
-
+ALLOWED_HOSTS = [
+    "8000-welshdan-smittys-bar-boo-alf68buf60.us2.codeanyapp.com",
+    "smittys-bar-booking.herokuapp.com",
+    "smittys-bar-booking-17a1b4da8e71.herokuapp.com",
+    "localhost",
+]
 # Application definition
 
 INSTALLED_APPS = [
