@@ -8,7 +8,8 @@ from .models import Customers
 
 
 class RegisterForm(UserCreationForm):
-    
+
     class Meta:
         model = Customers
-        fields = ('email', 'first_name', 'last_name', 'password1', 'password2')
+        fields = ('id', 'first_name',
+                  'last_name', 'email', 'password1', 'password2')

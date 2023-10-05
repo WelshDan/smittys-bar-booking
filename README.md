@@ -47,6 +47,9 @@ Email Smittys Bar:
 email: testemailsmittysbar@gmail.com
 password: SmittysBar:2023
 
+Test User:
+dave@daveemail.com / Dave / Davis / Thursday:2023
+
 Bootstrap template:
 Template Name: Restaurantly
 Template URL: <https://bootstrapmade.com/restaurantly-restaurant-template/>
