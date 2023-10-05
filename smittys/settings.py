@@ -55,8 +55,6 @@ INSTALLED_APPS = [
     'booking',
 ]
 
-AUTH_USER_MODEL = 'users.Customers'
-
 SITE_ID = 1
 
 # Log in

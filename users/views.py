@@ -2,15 +2,16 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import RegisterForm
+from django.contrib.auth.forms import UserCreationForm
 
 
 def login_user(request):
     # Check if logged in
     if request.method == "POST":
-        email = request.POST["email"]
+        username = request.POST["username"]
         password = request.POST["password"]
         # Authentication
-        user = authenticate(request, email=email, password=password)
+        user = authenticate(request, username=username, password=password)
 
         if user is not None:
             login(request, user)
@@ -36,10 +37,10 @@ def signup_user(request):
             user = form.save()
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
-        # Authentication
-        user = authenticate(request, username=username, password=password)
-        login(request, user)
-        messages.success(request, ("Sign up successful!"))
+            # Authentication
+            user = authenticate(request, username=username, password=password)
+            login(request, user)
+            messages.success(request, ("Sign up successful!"))
         return redirect('index.html')
     else:
         form = RegisterForm()
