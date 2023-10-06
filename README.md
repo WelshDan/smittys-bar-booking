@@ -71,3 +71,6 @@ Help with signup:
 
 Help with postgresql connection:
 <https://www.youtube.com/watch?v=t6RbanOhna4>
+
+Help with datepicker (Munim Munna)
+<https://www.google.com/search?q=django+insert+calender+to+choose+from&rlz=1C1CHBD_svSE1043SE1044&oq=django+insert+calender+to+choose+from&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIMCAEQIRgKGKABGIsDMgwIAhAhGAoYoAEYiwMyDAgDECEYChigARiLA9IBCTEwMTM5ajFqN6gCALACAA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:dc178dfd,vid:4EJlrweJE-M,st:0>

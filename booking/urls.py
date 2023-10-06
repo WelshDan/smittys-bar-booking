@@ -9,4 +9,5 @@ urlpatterns = [
     path('base/', views.get_base, name='base'),
     path('signup/', views.get_signup, name='signup'),
     path('login/', views.get_login, name='login'),
+    path('<int:year>/<str:month>', views.when_date, name="when_date")
 ]

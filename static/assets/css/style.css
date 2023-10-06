@@ -33,6 +33,15 @@ h6 {
     font-family: "Playfair Display", serif;
 }
 
+#messages-container {
+    position: absolute;
+    width: fit-content;
+    height: 100px;
+    top: 20vh;
+    right: 10px;
+    z-index: 100;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/

@@ -18,7 +18,7 @@ def login_user(request):
             return redirect('login')
         else:
             messages.success(request, ("That did not work! Please try again"))
-            return redirect('login')
+            return render(request, 'registration/login.html', {})
 
     else:
         return render(request, 'registration/login.html', {})
@@ -35,7 +35,9 @@ def signup_user(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             user = form.save()
-            username = form.cleaned_data['username']
+            first_name = form.cleaned_data['first_name']
+            last_name = form.cleaned_data['last_name']
+            email = form.cleaned_data['email']
             password = form.cleaned_data['password']
             # Authentication
             user = authenticate(request, username=username, password=password)

@@ -10,13 +10,14 @@
         <div class="row">
             <div class="col-lg-8">
                 <h1>Welcome to <span>Smitty's</span></h1>
-                <h2>Log in to book a table!</h2>
                 {% if user.is_authenticated %}
+                <h2>Book a table!</h2>
                 <div class="btns">
                     <a href="{% url 'booktable' %}" class="btn-login animated fadeInUp scrollto">Book a Table</a>
                     <a href="{% url 'logout' %}" class="btn-signup animated fadeInUp scrollto">Log Out</a>
                 </div>
                 {% else %}
+                <h2>Log in or Sign up to book a table!</h2>
                 <div class="btns">
                     <a href="{% url 'login' %}" class="btn-login animated fadeInUp scrollto">Log In</a>
                     <a href="{% url 'signup' %}" class="btn-signup animated fadeInUp scrollto">Sign Up</a>
