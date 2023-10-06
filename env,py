@@ -1,0 +1,5 @@
+import os
+
+os.environ['SECRET_KEY'] = "-h$*qa5k05863=^2jk&q=svpjszu=kuc)@r^*te87pm7yai#_0"
+os.environ['CLOUDINARY_URL'] = "188845939861319:dTDl2l-Yx9Mhq6Xrwt6hp-cAmRw@dhm06tert"
+os.environ['DATABASE_URL'] = "xouboegf:crZrf5-CN_i36WlaXmB-5pydBwNH8W6G@snuffleupagus.db.elephantsql.com/xouboegf"
