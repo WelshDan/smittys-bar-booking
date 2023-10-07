@@ -37,6 +37,12 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 ---
 
 Happy coding!
+Project bootstrapped using the Restaurantly website template available from <https://bootstrapmade.com/restaurantly-restaurant-template/>
+
+# H1 Smitty's Bar & Restaurant
+
+
+Log in proifiles used during production:
 
 Superuser:
 username: admin
@@ -59,18 +65,17 @@ License: <https://bootstrapmade.com/license/>
 
 Test sheet is connected was using data = tables.get_all_values then print(data) to the terminal
 
-Help installing allauth: <https://www.google.com/search?sca_esv=567555228&rlz=1C1CHBD_svSE1043SE1044&q=linking+django+allauth&tbm=vid&source=lnms&sa=X&ved=2ahUKEwjFjeKh9b2BAxUbRvEDHSdhA7MQ0pQJegQIChAB&biw=1536&bih=735&dpr=1.25#fpstate=ive&vld=cid:54078088>,vid:RyB_wdEZhOw,st:0
+CREDITS
 
-pictures taken frm <https://pixabay.com/>
+Mentor: Akshat Garg
+Fiverr debugger: Haris (coodingmentore)
+
+Help installing allauth: <https://www.google.com/search?sca_esv=567555228&rlz=1C1CHBD_svSE1043SE1044&q=linking+django+allauth&tbm=vid&source=lnms&sa=X&ved=2ahUKEwjFjeKh9b2BAxUbRvEDHSdhA7MQ0pQJegQIChAB&biw=1536&bih=735&dpr=1.25#fpstate=ive&vld=cid:54078088>
+
+Free pictures taken from <https://pixabay.com/>
 
 Help with authentication upon login:
 <https://docs.djangoproject.com/en/4.2/topics/auth/default/#auth-web-requests>
 
-Help with signup:
-<https://reintech.io/blog/writing-a-custom-signup-form-in-django>
-
 Help with postgresql connection:
-<https://www.youtube.com/watch?v=t6RbanOhna4>
-
-Help with datepicker (Munim Munna)
-<https://www.google.com/search?q=django+insert+calender+to+choose+from&rlz=1C1CHBD_svSE1043SE1044&oq=django+insert+calender+to+choose+from&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIMCAEQIRgKGKABGIsDMgwIAhAhGAoYoAEYiwMyDAgDECEYChigARiLA9IBCTEwMTM5ajFqN6gCALACAA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:dc178dfd,vid:4EJlrweJE-M,st:0>
+Profile: "Pretty Printed" <https://www.youtube.com/watch?v=t6RbanOhna4>
