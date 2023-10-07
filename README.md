@@ -89,7 +89,7 @@ These links are:
 This part of the webpage shows two buttons that change depending on whether the user is logged in or not.
 
 This is the page in its default position. Before logging in, the user can either choose to log in or sign up:<br>
-![Screenshot](static/assets/img/README/index1.jpg "Main page hero default")
+<img src="static/assets/img/README/index1.jpg" height=200 width="200">
 
 And this is the page after logging in, the user can now access the "Book a Table" page or choose to log out:<br>
 ![Screenshot](static/assets/img/README/login2.jpg "Main page hero when logged in")
@@ -109,16 +109,13 @@ Drinks:<br>
 ![Screenshot](static/assets/img/README/index5.jpg "Drinks choices")
 
 Events:<br>
-![Screenshot](../smittys-bar-booking/static/assets/img/README/index6.jpg "Drinks choices")
+![Screenshot](static/assets/img/README/index6.jpg "Drinks choices")
 
 Gallery:<br>
-![Screenshot](../smittys-bar-booking/static/assets/img/README/index7.jpg "Drinks choices")
+![Screenshot](static/assets/img/README/index7.jpg "Drinks choices")
 
 \*Contact:<br>
-![Screenshot](../smittys-bar-booking/static/assets/img/README/index8.jpg "Contact")
-
-![Screenshot](assets/images/multidevice.jpg)
-![(https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Screenshot](static/assets/img/README/index8.jpg "Contact")
 <br>
 
 #### Other html pages
@@ -127,13 +124,13 @@ Gallery:<br>
 ##### Sign in page
 
 This page is accessed through the "Sign Up" button and then the aim was that upon entering the nesessary details, the user would have their details registered to the admin part of django and then the user would be logged in(see bugs):<br>
-![Screenshot](../smittys-bar-booking/static/assets/img/README/signup.jpg.jpg "Contact")
+![Screenshot](static/assets/img/README/signup.jpg.jpg "Contact")
 <br>
 
 ##### Log in page
 
 The aim here was that this should have been accessed through the "Log In" button and then entering a previously registered email address and password, the user would be logged in(see bugs):<br>
-![Screenshot](../smittys-bar-booking/static/assets/img/README/login1.jpg.jpg "Contact")
+![Screenshot](static/assets/img/README/login1.jpg.jpg "Contact")
 
 ---
 
