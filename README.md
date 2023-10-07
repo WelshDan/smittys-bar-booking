@@ -1,58 +1,21 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome,
-
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **May 11th, 2023**
-
-## Codeanywhere Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
-
-`python3 -m http.server`
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
-
-`http_server`
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-
-
-
-![Screenshot](static/assets/img/smittys-logo.jpg "Smitty Logo")
----
-
 # Smitty's Bar & Restaurant<br>aka - A lesson in time-management, project-planning and sticking to the basics
-<br>
+
 This project was bootstrapped using the Restaurantly website template available from <https://bootstrapmade.com/restaurantly-restaurant-template/><br>
 and powered by the Cross Platform Cloud IDE called Codeanywhere <https://app.codeanywhere.com/>
+
+![Screenshot](static/assets/img/smittys-logo.jpg "Smitty Logo")
 
 ## Includes
 
 - Layout and Navigation
 - Programs and tools
-- Bugs, problems and issues
-- My feedback and experiences
+- Bugs, missing parts and issues
+- My feedback
 - Links, references and credits
-<br>
+
+The initial aim of this website was to provide a website to a fictional bar that included log/sign in/out functions and could utilise the inbuilt admin tool of Django and the database functions of PostgreSQL.
+
+This is a website and so the only thing needed would be to sign up and log in.
 
 ### Layout and Navigation
 
@@ -64,10 +27,8 @@ The website has 4 navigational pages:
 | 'login' Login            | Clicking on 'log in' button   |
 | 'signup' Sign Up         | Clicking on 'sign up' button   |
 | 'booktable' Book-a-table | Clicking on 'Book table' button |
-<br>
 
 #### The html pages
-
 
 ##### Homepage start up screen
 
@@ -138,7 +99,7 @@ The aim here was that this should have been accessed through the "Log In" button
 
 #### Programs
 
-The following are a list of the technical stuff used during this website:
+The following have been used during this website:
 
 - Django
 - Python
@@ -152,7 +113,7 @@ What should have also been used but wasn't (see problems):
 
 #### Tools
 
-The following are a list of the technical stuff used during this website:
+The following have been used during this website:
 
 - Bootstrap
 
@@ -170,15 +131,40 @@ password: SmittysBar:2023
 Test User:
 dave@daveemail.com / Dave / Davis / Thursday:2023
 
----
+-----
+
+## Bugs, missing parts and issues
+
+There are sadly many bugs, issues and missing parts to this website.
+
+#### Bugs
+
+- Upon entering login email and password, the html pages doesn't log the user in.
+- Upon entering signing in email and password, there is an error code
+- Message function is created and the code is added to the 'base.html' file but it does not load.
+
+
+#### Missing Parts
+
+There are many missing parts to the website:
+- PSQL database function not created
+- PSQL database tables not created
+- Table booking function on 'booktable.html' not created
+
+#### Issues
+- The style.css file contains code that is not used and maybe even isn't connected.
+- There are styling inconsistencies on the 'login.html' page
+
+-----
 
 ## My feedback
 
 #### My feedback
 
-I feel ashamed to hand in
+I can diplomatically say that this has been a challenge. I have learnt so much from the negative parts I've experienced during this project, to an almost life-changing level.
+This projected needed a simpler base bootstrap template, less time on the stylings and more time on the functionalities.
 
----
+-----
 
 ## Links, references and credits
 
