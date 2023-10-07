@@ -7,12 +7,12 @@ from .models import Customers
 
 
 class RegisterForm(ModelForm):
-    emails = forms.EmailField(max_length=100)
+    email = forms.EmailField(max_length=100)
     first_name = forms.CharField(max_length=60)
     last_name = forms.CharField(max_length=60)
 
     class Meta:
         model = Customers
         fields = ['first_name',
-                  'last_name', 'emails', 'password']
+                  'last_name', 'email', 'password']
 

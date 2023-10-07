@@ -63,6 +63,8 @@ TABLE_NUMBERS = [
     ('61', '61')
 ]
 
+class Calender(models.Model):
+    choose_date = models.DateField()
 
 class Tables(models.Model):
     table_number = models.IntegerField(primary_key=True)

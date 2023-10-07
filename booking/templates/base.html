@@ -31,6 +31,7 @@
 
     <!-- Template Main CSS File -->
     <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}" />
+
 </head>
 
 <body>
@@ -42,18 +43,16 @@
                 <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Wed: 11.00 - 23.00 | Thu-Sun: 11.00 -
                         01.00</span></i>
             </div>
+
         </div>
     </div>
-
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-cente">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
             <h1 class="logo me-auto me-lg-0">
                 <a href="{% url 'index' %}">Smitty's Bar & Restaurant</a>
             </h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+            <!-- .navbar -->
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                     <li>
@@ -80,7 +79,7 @@
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
-            <!-- .navbar -->
+            <!-- Log In or Log Out button -->
             {% if user.is_authenticated %}
             <a href="{% url 'logout' %}" class="login-btn scrollto d-none d-lg-flex">Logout</a>
             {% else %}
@@ -88,27 +87,20 @@
             {% endif %}
         </div>
     </header>
-    <!-- End Header -->
     <!-- ======= Error Messages ======= -->
     <div class="container" id="messages-container">
-        {% if messages %} {% for message in messages %}
-
+        {% if messages %}
+        {% for message in messages %}
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
             {{ message }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><span
+                    aria-hidden="true">&times;</span>
             </button>
         </div>
 
-        {% endfor %} {% endif %}
+        {% endfor %}
+        {% endif %}
     </div>
-    <!-- {% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
-            {% endfor %}
-    </ul>
-    {% endif %} -->
 
     {% block content %} {% endblock %}
     <!-- ======= Main Footer - links are not to be removed! ======= -->
@@ -141,8 +133,12 @@
     <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
     <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
 
+    <!-- Font Awesome JS File -->link
+    <script src="https://kit.fontawesome.com/d186afbc3c.js" crossorigin="anonymous"></script>
+
     <!-- Template Main JS File -->
     <script src="{% static 'assets/js/main.js' %}"></script>
+
 </body>
 
 </html>
