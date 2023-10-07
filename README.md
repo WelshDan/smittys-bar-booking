@@ -75,7 +75,7 @@ Events:<br>
 Gallery:<br>
 ![Screenshot](static/assets/img/README/index7.jpg "Drinks choices")
 
-\*Contact:<br>
+Contact Us:<br>
 ![Screenshot](static/assets/img/README/index8.jpg "Contact")
 <br>
 
@@ -85,13 +85,13 @@ Gallery:<br>
 ##### Sign in page
 
 This page is accessed through the "Sign Up" button and then the aim was that upon entering the nesessary details, the user would have their details registered to the admin part of django and then the user would be logged in(see bugs):<br>
-![Screenshot](static/assets/img/README/signup.jpg.jpg "Contact")
+![Screenshot](static/assets/img/README/signup.jpg "Sign in")
 <br>
 
 ##### Log in page
 
 The aim here was that this should have been accessed through the "Log In" button and then entering a previously registered email address and password, the user would be logged in(see bugs):<br>
-![Screenshot](static/assets/img/README/login1.jpg.jpg "Contact")
+![Screenshot](static/assets/img/README/login1.jpg "Log in")
 
 ---
 
@@ -150,6 +150,7 @@ There are many missing parts to the website:
 - PSQL database function not created
 - PSQL database tables not created
 - Table booking function on 'booktable.html' not created
+- The Contact US form is not connected
 
 #### Issues
 - The style.css file contains code that is not used and maybe even isn't connected.
