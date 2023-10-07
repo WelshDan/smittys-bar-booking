@@ -163,7 +163,7 @@ There are many missing parts to the website:
 #### My feedback
 
 I can diplomatically say that this has been a challenge. I have learnt so much from the negative parts I've experienced during this project, to an almost life-changing level.
-This projected needed a simpler base bootstrap template, less time on the stylings and more time on the functionalities.
+This project needed a simpler base bootstrap template, less time on the stylings and more time on the functionalities.
 
 -----
 
