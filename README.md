@@ -89,7 +89,7 @@ These links are:
 This part of the webpage shows two buttons that change depending on whether the user is logged in or not.
 
 This is the page in its default position. Before logging in, the user can either choose to log in or sign up:<br>
-<img src="static/assets/img/README/index1.jpg" width="200">
+![Screenshot](static/assets/img/README/index1.jpg" "Main page hero when logged in")
 
 And this is the page after logging in, the user can now access the "Book a Table" page or choose to log out:<br>
 ![Screenshot](static/assets/img/README/login2.jpg "Main page hero when logged in")
