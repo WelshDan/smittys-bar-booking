@@ -36,6 +36,9 @@ ALLOWED_HOSTS = [
     "smittys-bar-booking-17a1b4da8e71.herokuapp.com",
     "localhost",
 ]
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -46,12 +49,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'booking',
 ]
 
@@ -107,10 +110,6 @@ DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'xouboegf',
-        'USER': 'xouboegf',
-        'PASSWORD': 'crZrf5-CN_i36WlaXmB-5pydBwNH8W6G',
-        'HOST': 'snuffleupagus.db.elephantsql.com',
-        'PORT': '5432',
     }
 }
 
@@ -150,17 +149,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-ACCOUNT_EMAIL_VERIFICATION = 'none'
