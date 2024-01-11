@@ -196,3 +196,7 @@ This project needed a simpler base bootstrap template, less time on the stylings
 
 Mentor: Akshat Garg<br>
 Fiverr debugger: Haris (coodingmentore)<br>
+
+connecting heroku and django: https://www.youtube.com/watch?v=UkokhawLKDU
+import django_heroku
+from decouple import config

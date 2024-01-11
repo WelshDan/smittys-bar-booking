@@ -10,10 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path
-import cloudinary_storage
 import os
+import cloudinary_storage
+import django_heroku
 import dj_database_url
+from decouple import config
+from pathlib import Path
+
 if os.path.isfile('env.py'):
     import env
 
@@ -31,7 +34,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "8000-welshdan-smittys-bar-boo-scp68zefr7.us2.codeanyapp.com",
+    "8000-welshdan-smittys-bar-boo-3nxmvquhse.us2.codeanyapp.com",
     "smittys-bar-booking.herokuapp.com",
     "smittys-bar-booking-17a1b4da8e71.herokuapp.com",
     "localhost",
@@ -79,6 +82,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'smittys.urls'
@@ -110,9 +114,12 @@ DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'xouboegf',
+        'USER': 'xouboegf',
+        'PASSWORD': 'crZrf5-CN_i36WlaXmB-5pydBwNH8W6G',
+        'HOST': 'snuffleupagus.db.elephantsql.com',
+        'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -152,9 +159,10 @@ USE_TZ = True
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
 
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
@@ -162,3 +170,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_heroku.settings(locals())
+pip install django-heroku
+pip install python-decouple
