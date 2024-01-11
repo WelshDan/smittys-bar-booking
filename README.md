@@ -1,6 +1,8 @@
-# Smitty's Bar & Restaurant<br>aka - A lesson in time-management, project-planning and sticking to the basics
+# Smitty's Bar & Restaurant
 
-This project was bootstrapped using the Restaurantly website template available from <https://bootstrapmade.com/restaurantly-restaurant-template/><br>
+aka - A lesson in time-management, project-planning and sticking to the basics
+
+This project was bootstrapped using the Restaurantly website template available from <https://bootstrapmade.com/restaurantly-restaurant-template/>
 and powered by the Cross Platform Cloud IDE called Codeanywhere <https://app.codeanywhere.com/>
 
 ![Screenshot](static/assets/img/smittys-logo.jpg "Smitty Logo")
@@ -43,54 +45,49 @@ These links are:
 - Events
 - Gallery
 - Contact
-<br>
 
 ##### Home "hero section"
 
 This part of the webpage shows two buttons that change depending on whether the user is logged in or not.
 
-This is the page in its default position. Before logging in, the user can either choose to log in or sign up:<br>
+This is the page in its default position. Before logging in, the user can either choose to log in or sign up:
 ![Screenshot](static/assets/img/README/index1.jpg" "Main page hero when logged in")
 
-And this is the page after logging in, the user can now access the "Book a Table" page or choose to log out:<br>
+And this is the page after logging in, the user can now access the "Book a Table" page or choose to log out:
 ![Screenshot](static/assets/img/README/login2.jpg "Main page hero when logged in")
-<br>
 
 ##### Other links on main page
 
 The following links on the page are seen as follows:
 
-How to Book:<br>
+How to Book:
 ![Screenshot](static/assets/img/README/index2.jpg "How to book")
 
-Menu:<br>
+Menu:
 ![Screenshot](static/assets/img/README/index4.jpg "Food choices")
 
-Drinks:<br>
+Drinks:
 ![Screenshot](static/assets/img/README/index5.jpg "Drinks choices")
 
-Events:<br>
+Events:
 ![Screenshot](static/assets/img/README/index6.jpg "Drinks choices")
 
-Gallery:<br>
+Gallery:
 ![Screenshot](static/assets/img/README/index7.jpg "Drinks choices")
 
-Contact Us:<br>
+Contact Us:
 ![Screenshot](static/assets/img/README/index8.jpg "Contact")
-<br>
 
 #### Other html pages
 
-
 ##### Sign in page
 
-This page is accessed through the "Sign Up" button and then the aim was that upon entering the nesessary details, the user would have their details registered to the admin part of django and then the user would be logged in(see bugs):<br>
+This page is accessed through the "Sign Up" button and then the aim was that upon entering the nesessary details, the user would have their details registered to the admin part of django and then the user would be logged in(see bugs):
 ![Screenshot](static/assets/img/README/signup.jpg "Sign in")
-<br>
 
 ##### Log in page
 
-The aim here was that this should have been accessed through the "Log In" button and then entering a previously registered email address and password, the user would be logged in(see bugs):<br>
+The aim here was that this should have been accessed through the "Log In" button and then entering a previously registered email address and password, the user would be logged in(see bugs):
 ![Screenshot](static/assets/img/README/login1.jpg "Log in")
 
 ---
@@ -117,7 +114,7 @@ The following have been used during this website:
 
 - Bootstrap
 
-#### Log in profiles and profiles used during production:
+#### Log in profiles and profiles used during production
 
 Superuser:
 username: admin
@@ -131,7 +128,7 @@ password: SmittysBar:2023
 Test User:
 dave@daveemail.com / Dave / Davis / Thursday:2023
 
------
+---
 
 ## Bugs, missing parts and issues
 
@@ -143,20 +140,21 @@ There are sadly many bugs, issues and missing parts to this website.
 - Upon entering signing in email and password, there is an error code
 - Message function is created and the code is added to the 'base.html' file but it does not load.
 
-
 #### Missing Parts
 
 There are many missing parts to the website:
+
 - PSQL database function not created
 - PSQL database tables not created
 - Table booking function on 'booktable.html' not created
 - The Contact US form is not connected
 
 #### Issues
+
 - The style.css file contains code that is not used and maybe even isn't connected.
 - There are styling inconsistencies on the 'login.html' page
 
------
+---
 
 ## My feedback
 
@@ -165,38 +163,40 @@ There are many missing parts to the website:
 I can diplomatically say that this has been a challenge. I have learnt so much from the negative parts I've experienced during this project, to an almost life-changing level.
 This project needed a simpler base bootstrap template, less time on the stylings and more time on the functionalities.
 
------
+---
 
 ## Links, references and credits
 
 #### Links and references
 
 - \*Bootstrap template:
-  Template Name: Restaurantly<br>
-  Template URL: <https://bootstrapmade.com/restaurantly-restaurant-template/><br>
-  Link: <https://github.com/technext/restaurantly/releases/download/v1.0/Restaurantly.zip><br>
-  Author: BootstrapMade.com<br>
-  License: <https://bootstrapmade.com/license/><br>
+  Template Name: Restaurantly
+  Template URL: <https://bootstrapmade.com/restaurantly-restaurant-template/>
+  Link: <https://github.com/technext/restaurantly/releases/download/v1.0/Restaurantly.zip>
+  Author: BootstrapMade.com
+  License: <https://bootstrapmade.com/license/>
 
-- Help installing allauth:<br>
+- Help installing allauth:
   Code with Stein <https://www.google.com/search?sca_esv=567555228&rlz=1C1CHBD_svSE1043SE1044&q=linking+django+allauth&tbm=vid&source=lnms&sa=X&ved=2ahUKEwjFjeKh9b2BAxUbRvEDHSdhA7MQ0pQJegQIChAB&biw=1536&bih=735&dpr=1.25#fpstate=ive&vld=cid:54078088>
 
-- Pictures:<br>
+- Pictures:
   Pixabay <https://pixabay.com/>
 
-- Help with authentication upon login:<br>
+- Help with authentication upon login:
   djangoproject.com <https://docs.djangoproject.com/en/4.2/topics/auth/default/#auth-web-requests>
 
-- Help with postgresql connection:<br>
+- Help with postgresql connection:
   Profile: "Pretty Printed" <https://www.youtube.com/watch?v=t6RbanOhna4>
 
-- Youtube online guides and tutorials: Codemy.com<br>
+- Youtube online guides and tutorials: Codemy.com
 
 #### Credits
 
-Mentor: Akshat Garg<br>
-Fiverr debugger: Haris (coodingmentore)<br>
+Mentor: Akshat Garg
+Fiverr debugger: Haris (coodingmentore)
 
-connecting heroku and django: https://www.youtube.com/watch?v=UkokhawLKDU
+[connecting heroku and django:](https://www.youtube.com/watch?v=UkokhawLKDU)
 import django_heroku
 from decouple import config
+pip install django-heroku
+pip install python-decouple
