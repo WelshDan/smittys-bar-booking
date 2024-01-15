@@ -5,7 +5,6 @@ from .models import Customers
 
 # Create a new user registration form
 
-
 class RegisterForm(ModelForm):
     email = forms.EmailField(max_length=100)
     first_name = forms.CharField(max_length=60)
@@ -13,6 +12,5 @@ class RegisterForm(ModelForm):
 
     class Meta:
         model = Customers
-        fields = ['first_name',
-                  'last_name', 'email', 'password']
+        fields = ['first_name', 'last_name', 'email', 'password']
 

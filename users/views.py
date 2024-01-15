@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import RegisterForm
@@ -16,10 +16,10 @@ def login_user(request):
         if user is not None:
             login(request, user)
             messages.success(request, ("You are now logged in!"))
-            return redirect('login')
+            return redirect('index', {})
         else:
             messages.error(request, ("That did not work! Please try again"))
-            return render(request, 'login')
+            return render(request, 'login', {})
 
     else:
         return render(request, 'registration/login.html', {})
@@ -48,3 +48,4 @@ def signup_user(request):
     else:
         form = RegisterForm()
     return render(request, 'registration/signup.html', {'form': form})
+

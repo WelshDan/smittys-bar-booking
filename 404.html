@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<!-- ======= Check if logged in ======= -->
+{% if user.is_authenticated %}
+
+<section id="login" class="login">
+    <div class="container section" data-aos="fade-up">
+        <div class="section-title">
+            <h1>Sorry, you've hit an error 404</h1>
+            <p>Something has gone wrong. Use the menu bar to navigate to another page</p>
+        </div>
+        <div class="section-title">
+            <div class="btns">
+                <a href="{% url 'booktable' %}" class="btn-login animated fadeInUp scrollto">Book a Table</a>
+            </div>
+        </div>
+        <div class="section-title">
+            <h2>Log out</h2>
+            <p>Click here to log out</p>
+        </div>
+    </div>
+    <div class="btns">
+        <a href="{% url 'logout' %}" class="btn-signup animated fadeInUp scrollto">Sign Up</a>
+    </div>
+</section>
+{% endif %}
+{% endblock %}
