@@ -25,7 +25,7 @@ def get_signup(request):
 def get_login(request):
     return render(request, 'login.html')
 
-#def when_date(request, year, month):
+def when_date(request, year, month):
     name = "When"
     return render(request, 'booktable.html', {
         "calender" : calender,

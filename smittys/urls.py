@@ -1,10 +1,12 @@
 from django.contrib import admin
 from django.urls import path, include
 from booking import views
+from users import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.get_index, name='index'),
+    path('booking/', include('booking.urls')),
     path('booktable/', views.get_booktable, name='booktable'),
     path('base/', views.get_base, name='base'),
     path('signup/', views.get_signup, name='signup'),

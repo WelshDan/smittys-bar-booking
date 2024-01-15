@@ -15,11 +15,10 @@ def login_user(request):
 
         if user is not None:
             login(request, user)
-            messages.success(request, ("You are now logged in!"))
-            return redirect('index', {})
+            return redirect('index')
         else:
             messages.error(request, ("That did not work! Please try again"))
-            return render(request, 'login', {})
+            return redirect('login')
 
     else:
         return render(request, 'registration/login.html', {})
@@ -35,7 +34,7 @@ def signup_user(request):
     if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
-            user = form.save()
+            form.save()
             first_name = form.cleaned_data['first_name']
             last_name = form.cleaned_data['last_name']
             email = form.cleaned_data['email']
@@ -47,5 +46,26 @@ def signup_user(request):
         return redirect('index')
     else:
         form = RegisterForm()
+
     return render(request, 'registration/signup.html', {'form': form})
 
+
+def get_index(request):
+    messages.success(request, ("That did not work! Please try again"))
+    return render(request, 'index.html')
+
+
+def get_booktable(request):
+    return render(request, 'booktable.html')
+
+    
+def get_base(request):
+    return render(request, 'base.html')
+
+
+def get_signup(request):
+    return render(request, 'signup.html')
+
+
+def get_login(request):
+    return render(request, 'login.html')
