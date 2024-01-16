@@ -12,14 +12,13 @@ def login_user(request):
         password = request.POST["password"]
         # Authentication
         user = authenticate(request, email=email, password=password)
-
         if user is not None:
             login(request, user)
             return redirect('index')
         else:
             messages.error(request, ("That did not work! Please try again"))
             return redirect('login')
-
+            
     else:
         return render(request, 'registration/login.html', {})
 
