@@ -24,8 +24,8 @@ The website has 4 navigational pages:
 | 'html' Page Name         |          Accessed how?          |
 | ------------------------ | :-----------------------------: |
 | 'index' Home             | Loading homepage, 'logging out' |
-| 'login' Login            | Clicking on 'log in' button   |
-| 'signup' Sign Up         | Clicking on 'sign up' button   |
+| 'login' Login            |   Clicking on 'log in' button   |
+| 'signup' Sign Up         |  Clicking on 'sign up' button   |
 | 'booktable' Book-a-table | Clicking on 'Book table' button |
 
 #### The html pages
