@@ -46,7 +46,6 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'users',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -59,6 +58,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'booking',
+    'users',
 ]
 
 SITE_ID = 1
@@ -89,7 +89,7 @@ ROOT_URLCONF = 'smittys.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

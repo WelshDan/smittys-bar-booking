@@ -20,7 +20,7 @@ def login_user(request):
             return redirect('login')
             
     else:
-        return render(request, 'account/login.html', {})
+        return render(request, 'allauth/account/login.html', {})
 
 
 def logout_user(request):
@@ -46,7 +46,7 @@ def signup_user(request):
     else:
         form = RegisterForm()
 
-    return render(request, 'registration/signup.html', {'form': form})
+    return render(request, 'allauth/account/signup.html', {'form': form})
 
 
 def get_index(request):

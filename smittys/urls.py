@@ -5,13 +5,13 @@ from users import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
     path('', views.get_index, name='index'),
+    path('accounts/', include('allauth.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('base/', views.get_base, name='base'),
     path('booking/', include('booking.urls')),
     path('booktable/', views.get_booktable, name='booktable'),
     path('users/', include('users.urls')),
-    path('users/', include('django.contrib.auth.urls')),
 ]
 
 # Admin titles and headings"
