@@ -8,7 +8,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', views.get_index, name='index'),
     path('base/', views.get_base, name='base'),
-
     path('booking/', include('booking.urls')),
     path('booktable/', views.get_booktable, name='booktable'),
     path('users/', include('users.urls')),
