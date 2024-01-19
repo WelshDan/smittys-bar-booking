@@ -1,19 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-
-NUMBER_OF_SEATS = [
-    ('2', '2'),
-    ('4', '4'),
-    ('6', '6'),
-    ('8', '8')
-]
-
-ROOM_NAME = [
-    ('Main Bar', 'Main Bar'),
-    ('Dining Room', 'Dining Room'),
-    ('Sports Room', 'Sports Room')
-]
+from datetime import date
+from datetime import datetime
 
 TABLE_NUMBERS = [
     ('0', '0'),
@@ -63,18 +52,16 @@ TABLE_NUMBERS = [
     ('61', '61')
 ]
 
-class Calender(models.Model):
-    choose_date = models.DateField()
-
-class Tables(models.Model):
-    table_number = models.IntegerField(primary_key=True)
-    no_of_seats = models.IntegerField(choices=NUMBER_OF_SEATS)
-    room_type = models.CharField(max_length=12, choices=ROOM_NAME)
-    available = models.BooleanField()
-
-
 class Reservations(models.Model):
+
+    now = datetime.now()
+
     booking_id = models.IntegerField(primary_key=True)
-    date_and_time = models.DateTimeField()
-    booking_length = models.DurationField()
     table_number = models.IntegerField(choices=TABLE_NUMBERS)
+    date = models.DateField(default=now.day)
+    start_time = models.TimeField(default=now.hour)
+    end_time = models.TimeField(default=now.hour)
+
+
+    def __str__(self):
+        return self.name

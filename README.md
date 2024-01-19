@@ -198,3 +198,5 @@ import django_heroku
 from decouple import config
 installed pipreqs to only use reqs that are necessary
 installed piptools to combine
+
+models.py [datetime](https://stackoverflow.com/questions/2029295/django-datefield-default-options)
