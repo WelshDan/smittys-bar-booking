@@ -1,6 +1,7 @@
+from .models import Reservations
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
-from .models import Reservations
+from .forms import TableBookingForm
 
 def get_base(request):
     return render(request, 'base.html')
@@ -22,10 +23,3 @@ def get_signup(request):
 def get_login(request):
     return render(request, 'login.html')
 
-def when_date(request, year, month):
-    name = "When"
-    return render(request, 'booktable.html', {
-        "calender" : calender,
-        "year": year,
-        "month": month,
-    })

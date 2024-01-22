@@ -9,15 +9,13 @@
                 <h2>Reservation</h2>
                 <p>Book a Table</p>
             </div>
-            <!-- Calender -->
-
-            <div class>
+            <div class="row">
                 <form method="post">
                     {% csrf_token %}
                     <div class="dropdown show">
                         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown link
+                            Choose a table
                         </a>
                         <div class="dropdown-menu" aria-labelledby="Choose a Table">
                             <a class="dropdown-item" href="#">Action</a>
@@ -26,14 +24,83 @@
                         </div>
                     </div>
                 </form>
-
+            </div>
+            <div class="section-title">
+                <div class="section-title">
+                    <h2>Event Information</h2>
+                    <p>Where and when?</p>
+                </div>
+                <div class="row col-lg-6 pt-4 pt-lg-0 content">
+                    <table class="table table-sm table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Event</th>
+                                <th scope="col">Room</th>
+                                <th scope="col">Day</th>
+                                <th scope="col">Tables</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Stand Up</th>
+                                <td>Main Bar</td>
+                                <td>Mondays</td>
+                                <td>#40 - #61</td>
+                            </tr>
+                            <tr>
+                                <th>Quiz</th>
+                                <td>Main Bar</td>
+                                <td>Thursdays</td>
+                                <td>#40 - #61</td>
+                            </tr>
+                            <tr>
+                                <th>Live Music</th>
+                                <td>Main Bar</td>
+                                <td>Wednesdays, Fridays, Saturdays</td>
+                                <td>#40 - #61</td>
+                            </tr>
+                            <tr>
+                                <th>Food reservation</th>
+                                <td>Dining Room</td>
+                                <td>All</td>
+                                <td>#0 - #10</td>
+                            </tr>
+                            <tr>
+                                <th>Sporting Events</th>
+                                <td>Sports Room</td>
+                                <td>All*</td>
+                                <td>#20 - #31</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="event-table">
+                        <tbody>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>*Book a table close to a screen and we will tune that screen to your live event</td>
+                            </tr>
+                            <tr>
+                                <td>Tables can only be booked for times between 12:00 and 23:00</td>
+                            </tr>
+                            <tr>
+                                <td>Live events start at 20.00 - please book your table for at least an hour before</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="section-title">
+                <h2>Floor Plan</h2>
+                <p>Pick where you would like to sit</p>
                 <div class="col-lg-12 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
                     <div class="floorplan-img">
                         <img src="{% static 'assets/img/floorplan-with-nums.jpg' %}" alt="" />
                     </div>
                 </div>
-
             </div>
+        </div>
     </section>
 </body>
 <!-- End Book A Table Section -->

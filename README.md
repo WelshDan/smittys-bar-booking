@@ -202,3 +202,5 @@ installed piptools to combine
 models.py [datetime](https://stackoverflow.com/questions/2029295/django-datefield-default-options)
 installing db in postgresql using Code Institute module [Database Management Systems](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DB101+2021_T1/courseware/c0c31790fcf540539fd2bd3678b12406/87ffa16374c74c55b202724586a834c9/?child=last)
 issues with migrations - Tutor Assistance (Holly) - migrations deleted and elephantsql database reset, then migrations rerun date 220124
+NEW SUPERUSER: admin/Monday:123
+Test users: Alan/Alans/alan@gmail.com/Alan:2024

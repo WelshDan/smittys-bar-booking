@@ -1,8 +1,7 @@
 from django import forms
-from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
-from django import forms
+from .models import Reservations
 
-class TableBookings(forms.Form):
-    date = forms.DateField(widget=forms.SelectDateWidget())
-    
+class TableBookingForm(forms.ModelForm):
+    class Meta:
+        model = Reservations
+        fields = '__all__'
