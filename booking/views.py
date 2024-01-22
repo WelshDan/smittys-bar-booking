@@ -1,9 +1,6 @@
 from django.shortcuts import render, get_object_or_404
-import calendar
 from django.contrib import messages
-
-#from calender import HTMLCalender
-
+from .models import Reservations
 
 def get_base(request):
     return render(request, 'base.html')

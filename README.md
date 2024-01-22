@@ -1,4 +1,4 @@
-# Smitty's Bar & Restaurantaka - A lesson in time-management, project-planning and sticking to the basics
+# Smitty's Bar & Restaurant aka - A lesson in time-management, project-planning and sticking to the basics
 
 This project was bootstrapped using the Restaurantly website template available from <https://bootstrapmade.com/restaurantly-restaurant-template/>
 and powered by the Cross Platform Cloud IDE called Codeanywhere <https://app.codeanywhere.com/>
@@ -200,3 +200,5 @@ installed pipreqs to only use reqs that are necessary
 installed piptools to combine
 
 models.py [datetime](https://stackoverflow.com/questions/2029295/django-datefield-default-options)
+installing db in postgresql using Code Institute module [Database Management Systems](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DB101+2021_T1/courseware/c0c31790fcf540539fd2bd3678b12406/87ffa16374c74c55b202724586a834c9/?child=last)
+issues with migrations - Tutor Assistance (Holly) - migrations deleted and elephantsql database reset, then migrations rerun date 220124
