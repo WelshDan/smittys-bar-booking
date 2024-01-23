@@ -12,16 +12,16 @@ def get_base(request):
 def reserve_table(request):
     submitted = False
     if request.method == "POST":
-        form = TableBookingForm(request.POST)
+        form = TableBookingForm(request.POST, request.files)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/reserve_table?submitted=True')
     else:
-        form = TableBookingForm
+        form = TableBookingForm()
         if 'submitted' in request.GET:
             submitted = True
 
-    return render(request, 'allauth/booktable.html', {'form':form, 'submitted':submitted})
+    return render(request, 'booktable.html', {'form':form, 'submitted':submitted})
 
 
 def get_index(request):
