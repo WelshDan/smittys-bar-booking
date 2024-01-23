@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
+ {% load static %} 
+ {% block content %}
 
 <!-- ======= Book A Table Section ======= -->
 
@@ -20,6 +22,12 @@
                         {{ form.as_p }}
 
                     </form>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Choose a table</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
             <div class="section-title">
                 <div class="section-title">
                     <h2>Event Information</h2>
