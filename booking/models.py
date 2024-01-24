@@ -56,14 +56,21 @@ class Reservations(models.Model):
 
     now = datetime.now()
 
-    booking_id = models.IntegerField(primary_key=True)
-    table_number = models.CharField(
-        max_length = 20,
-        choices=TABLE_NUMBERS
+    booking_id = models.IntegerField(
+        primary_key=True,
+        auto_created = True,
+        serialize=False,
         )
-    start_time = models.TimeField(default=now.hour)
-    end_time = models.TimeField(default=now.hour)
-
+    table_number = models.CharField(
+        max_length=20,
+        choices=TABLE_NUMBERS,
+        null=False,
+        blank=False
+        )
+    date = models.DateField(max_length=20, null=False, blank=False)
+    start_time = models.TimeField(default=now.hour, null=False, blank=False)
+    end_time = models.TimeField(default=now.hour, null=False, blank=False)
+    active_booking = models.BooleanField()
 
     def __str__(self):
         return self.name

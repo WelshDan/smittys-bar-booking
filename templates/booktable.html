@@ -15,16 +15,13 @@
                 {% if submitted %}
                     Your table was booked successfully
                 {% else %}
-
+                    {{ form.media }}
                     <form action="" method="POST">
                         
                         {% csrf_token %}
 
-                       
-                        {{ form.table_number.label_tag }}
-                        {{ form.date }}
-                        {{ form.start_time }}
-                        {{ form.end_time }}
+                        {% bootstrap_form form %}
+                        {{ form.as_p }}
 
                         <select class="form-select" aria-label="Default select example">
                             <option selected>Choose a table</option>
@@ -37,10 +34,7 @@
                         <input type="submit" value="Submit" class="btn-login animated fadeInUp scrollto">
 
                     </form>
-<<<<<<< HEAD
                 {% endif %}
-=======
->>>>>>> 1617c90986df65e84c1574852d6ae3d86ef29a87
             <div class="section-title">
                 <div class="section-title">
                     <h2>Event Information</h2>
