@@ -21,7 +21,7 @@ def reserve_table(request):
         if 'submitted' in request.GET:
             submitted = True
 
-    return render(request, 'allauth/booktable.html', {'form':form, 'submitted':submitted})
+    return render(request, 'booktable.html', {'form':form, 'submitted':submitted})
 
 
 def get_index(request):

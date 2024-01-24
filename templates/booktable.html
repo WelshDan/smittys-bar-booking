@@ -1,6 +1,7 @@
 {% extends "base.html" %}
- {% load static %} 
- {% block content %}
+{% load static %} 
+{% block content %}
+{% if user.is_authenticated %}
 
 <!-- ======= Book A Table Section ======= -->
 
@@ -15,19 +16,16 @@
                     Your table was booked successfully
                 {% else %}
 
-                {% endif %}
-                    <form action="" method="post">
+                    <form action="" method="POST">
+                        
                         {% csrf_token %}
 
                         {{ form.as_p }}
 
+                        <input type="submit" value="Submit" class="btn-login animated fadeInUp scrollto">
+
                     </form>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Choose a table</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
+                {% endif %}
             <div class="section-title">
                 <div class="section-title">
                     <h2>Event Information</h2>
@@ -105,6 +103,10 @@
             </div>
         </div>
     </section>
+{% else %}
+    <h1>You must be logged in to view this page</h1>
+
+{% endif %}
 </body>
 <!-- End Book A Table Section -->
 

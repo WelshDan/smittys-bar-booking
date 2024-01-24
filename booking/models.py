@@ -4,7 +4,7 @@ from cloudinary.models import CloudinaryField
 from datetime import date
 from datetime import datetime
 
-TABLE_NUMBERS = [
+TABLE_NUMBERS = (
     ('0', '0'),
     ('1', '1'),
     ('2', '2'),
@@ -50,15 +50,17 @@ TABLE_NUMBERS = [
     ('59', '59'),
     ('60', '60'),
     ('61', '61')
-]
+)
 
 class Reservations(models.Model):
 
     now = datetime.now()
 
     booking_id = models.IntegerField(primary_key=True)
-    table_number = models.IntegerField(choices=TABLE_NUMBERS)
-    date = models.DateField(default=now.day)
+    table_number = models.CharField(
+        max_length = 20,
+        choices=TABLE_NUMBERS
+        )
     start_time = models.TimeField(default=now.hour)
     end_time = models.TimeField(default=now.hour)
 
