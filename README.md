@@ -117,7 +117,7 @@ The following have been used during this website:
 Superuser:
 username: admin
 email: admin@email.com
-Password: September:2023
+Password: admin
 
 Email Smittys Bar:
 email: testemailsmittysbar@gmail.com
@@ -138,6 +138,8 @@ There are sadly many bugs, issues and missing parts to this website.
 - Upon entering signing in email and password, there is an error code
 - Message function is created and the code is added to the 'base.html' file but it does not load.
 
+- Models in booking and user apps are incorrectly titled as Reservations and Users, instead of Reservation and User
+
 #### Missing Parts
 
 There are many missing parts to the website:
@@ -152,6 +154,11 @@ There are many missing parts to the website:
 - The style.css file contains code that is not used and maybe even isn't connected.
 - There are styling inconsistencies on the 'login.html' page
 
+#### Problems
+
+- [Crispy](https://github.com/Dandresfsoto/crispy-forms-materialize/issues/13>)
+https://django-crispy-forms.readthedocs.io/en/latest/form_helper.html
+Temporarily removed Crispy
 ---
 
 ## My feedback
@@ -202,9 +209,11 @@ installed piptools to combine
 [adding datetimepicker] (https://pypi.org/project/django-bootstrap-datepicker-plus)
 added datepicker using pip install django-bootstrap-datepicker-plus
 install pip install django-bootstrap-v5
+[adding datetimepicker usage](https://django-bootstrap-datepicker-plus.readthedocs.io/en/latest/Usage.html#model-form-usage)
+installed pip install django-crispy-forms to run datetimepicker
 
 models.py [datetime](https://stackoverflow.com/questions/2029295/django-datefield-default-options)
 installing db in postgresql using Code Institute module [Database Management Systems](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DB101+2021_T1/courseware/c0c31790fcf540539fd2bd3678b12406/87ffa16374c74c55b202724586a834c9/?child=last)
 issues with migrations - Tutor Assistance (Holly) - migrations deleted and elephantsql database reset, then migrations rerun date 220124
-NEW SUPERUSER: admin/Monday:123
+NEW SUPERUSER: admin/admin
 Test users: Alan/Alans/alan@gmail.com/Alan:2024

@@ -1,11 +1,16 @@
-from django import forms
+from bootstrap_datepicker_plus.widgets import DatePickerInput, TimePickerInput
 from .models import Reservations
-from bootstrap_datepicker_plus.widgets import DatePickerInput
+from django import forms
+from crispy_forms.helper import FormHelper
 
 class TableBookingForm(forms.ModelForm):
     class Meta:
         model = Reservations
-        fields = ('table_number', 'start_time', 'end_time')
+        fields = ('table_number', 'date', 'start_time', 'end_time')
         widgets = {
-                "date": DatePickerInput()
-            }
+            "name": forms.HiddenInput(),
+            "date": DatePickerInput(options={"format": "MM/DD/YYYY"}),
+            "start_time": TimePickerInput(),
+            "end_time": TimePickerInput(range_from="start_time"),
+        }
+        

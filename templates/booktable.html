@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load static %} 
+{% load static %}
 {% block content %}
 {% if user.is_authenticated %}
 
@@ -15,12 +15,9 @@
                 {% if submitted %}
                     Your table was booked successfully
                 {% else %}
-                    {{ form.media }}
                     <form action="" method="POST">
-                        
                         {% csrf_token %}
 
-                        {% bootstrap_form form %}
                         {{ form.as_p }}
 
                         <select class="form-select" aria-label="Default select example">
@@ -29,7 +26,6 @@
                             <option value="2">Two</option>
                             <option value="3">Three</option>
                         </select>
-                        <button type="submit">Submit</button>
 
                         <input type="submit" value="Submit" class="btn-login animated fadeInUp scrollto">
 
