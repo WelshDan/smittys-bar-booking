@@ -1,5 +1,4 @@
 {% load static %}
-{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -133,39 +132,29 @@
                 >Contact</a
               >
             </li>
+            <!-- Log In or Log Out button -->
+            {% if user.is_authenticated %}
+                <li>
+                    <a href="{% url 'booktable' %}" class="btn-login animated fadeInUp scrollto">Book a Table</a>
+                </li>
+                <li>
+                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" class="btn-logout animated fadeInUp scrollto"
+                        aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li>
+                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" class="btn-signup animated fadeInUp scrollto"
+                        aria-current="page" href="{% url 'account_signup' %}">Register</a>
+                </li>
+                <li>
+                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" class="btn-login animated fadeInUp scrollto"
+                        aria-current="page" href="{% url 'account_login' %}">Login</a>
+                </li>
+            {% endif %}
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
-        <!-- Log In or Log Out button -->
-        {% if user.is_authenticated %}
-        <div class="btns">
-          <a
-            class="nav-link {% if request.path == logout_url %}active{% endif %}"
-            class="btn-logout animated fadeInUp scrollto"
-            aria-current="page"
-            href="{% url 'account_logout' %}"
-            >Logout</a
-          >
-        </div>
-        {% else %}
-        <div class="btns">
-          <a
-            class="nav-link {% if request.path == signup_url %}active{% endif %}"
-            class="btn-signup animated fadeInUp scrollto"
-            aria-current="page"
-            href="{% url 'account_signup' %}"
-            >Register</a
-          >
-          <a
-            class="nav-link {% if request.path == login_url %}active{% endif %}"
-            class="btn-login animated fadeInUp scrollto"
-            aria-current="page"
-            href="{% url 'account_login' %}"
-            >Login</a
-          >
-        </div>
-        {% endif %}
-      </div>
+        
     </header>
     <!-- ======= Error Messages ======= -->
     {% if messages %}
@@ -183,8 +172,12 @@
             </div>
         {% endfor %}
     {% endif %}
-
-    {% block content %} {% endblock %}
+    <main class="flex-shrink-0 main-bg">
+    
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+    </main>
     <!-- ======= Main Footer - links are not to be removed! ======= -->
     <footer id="footer" class="footer">
       <div class="container">

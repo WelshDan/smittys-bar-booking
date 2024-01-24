@@ -12,6 +12,7 @@ urlpatterns = [
     path('base/', views.get_base, name='base'),
     path('booking/', include('booking.urls')),
     path('users/', include('users.urls')),
+    path('booktable/', views.get_booktable, name='booktable'),
 ]
 
 # Admin titles and headings"

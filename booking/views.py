@@ -9,6 +9,10 @@ def get_base(request):
     return render(request, 'base.html')
 
 
+def get_booktable(request):
+    return render(request, 'booktable.html')
+
+
 def reserve_table(request):
     submitted = False
     form = TableBookingForm(request.POST)

@@ -35,7 +35,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "8000-welshdan-smittys-bar-boo-3nxmvquhse.us2.codeanyapp.com",
-    "smittys-bar-booking.herokuapp.com",
     "smittys-bd7d75f32e46.herokuapp.com",
     "localhost",
 ]
