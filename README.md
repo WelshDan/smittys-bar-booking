@@ -206,3 +206,4 @@ installing db in postgresql using Code Institute module [Database Management Sys
 issues with migrations - Tutor Assistance (Holly) - migrations deleted and elephantsql database reset, then migrations rerun date 220124
 NEW SUPERUSER: admin/Monday:123
 Test users: Alan/Alans/alan@gmail.com/Alan:2024
+

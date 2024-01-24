@@ -12,12 +12,12 @@ def get_base(request):
 def reserve_table(request):
     submitted = False
     if request.method == "POST":
-        form = TableBookingForm(request.POST)
+        form = TableBookingForm(request.POST, request.files)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/reserve_table?submitted=True')
     else:
-        form = TableBookingForm
+        form = TableBookingForm()
         if 'submitted' in request.GET:
             submitted = True
 
