@@ -66,7 +66,7 @@ The website was created using the following:
 
 The website can be found [here](https://smittys-bd7d75f32e46.herokuapp.com/)
 
---------------
+----------------
 
 ## 2. Planning
 
@@ -74,11 +74,37 @@ The website can be found [here](https://smittys-bd7d75f32e46.herokuapp.com/)
 
 **Ideas**
 
+The thought process started with the suggestion of creating a booking system. I have experience of pub culture and so by being able to translate this idea into something I could relate to made the experience a lot more interesting, although maybe the attention to the visuals ended up being a lot greater than was needed. More attention to the functionality would’ve made this project a lot more enjoyable as I was progressing through.
+Also with the bootstrap website being so advanced it actually made the process a lot harder. The more a customised, the more it created errors and bugs.
+
+**UX Design**
+
 
 
 #### 2.2 User Stories
 
---------------
+**Programmer**
+
+- As a **programmer** I can **create a colour pattern and favicon for the website** to **make it pleasant for users**
+- As a **programmer** I can **provide layout details and information to the user** to **help them make a choice and entice them to book a table**
+- As a **programmer** I can **create a secure log in to the system** to **provide security of the details of the user**
+- As a **programmer** I can **create a useful database** to **store information and provide it easily on the bookings of tables**
+
+**Admin**
+
+- As an **admin** I can **edit and check information** to **help with bookings and meet user demands**
+
+User Stories not chosen:
+
+- As a **user** I can **create an avatar** to **make my profile more fun**
+- As a **user** I can **book multiple tables** to **make sure I can fit all my friends in**
+- As a **user** I can **use the pub layout map to choose the table I want to sit at**so that I can **easily see what table suits my choice for my chosen time**
+
+User Stories not closed:
+
+- As a **programmer** I can **create a mailing system** to **keep the user/owners update with bookings and any changes/cancellations**
+- As a **programmer** I can **create sufficient checks** to **enable the website to run without errors**
+- As a **programmer** I can **create an upcoming events page** so that I can **inform the user of what future events are happening at the pub**
 
 ## Include
 

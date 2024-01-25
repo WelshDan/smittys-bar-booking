@@ -34,8 +34,8 @@ def get_index(request):
 
 
 def get_signup(request):
-    return render(request, 'signup.html')
+    return render(request, 'account_signup.html')
 
 
 def get_login(request):
-    return render(request, 'login.html')
+    return render(request, 'account_login.html')
