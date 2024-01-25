@@ -1,11 +1,86 @@
-# Smitty's Bar & Restaurant aka - A lesson in time-management, project-planning and sticking to the basics
+# Smitty's Bar & Restaurant
 
-This project was bootstrapped using the Restaurantly website template available from <https://bootstrapmade.com/restaurantly-restaurant-template/>
-and powered by the Cross Platform Cloud IDE called Codeanywhere <https://app.codeanywhere.com/>
+Bootstrapped using the Restaurantly website template available from <https://bootstrapmade.com/restaurantly-restaurant-template/>
+
+Edited in the Cross Platform Cloud IDE Codeanywhere <https://app.codeanywhere.com/>
 
 ![Screenshot](static/assets/img/smittys-logo.jpg "Smitty Logo")
 
-## Includes
+---------------
+
+## Table of contents
+
+1. The basics of Smitty’s<br/>
+    1.1 Brief introduction<br/>
+    1.2 Basic mechanics<br/>
+    1.3 Link to website<br/>
+2. Planning<br/>
+    2.1 Ideas and UX Design<br/>
+    2.2 User Stories<br/>
+3. Layout<br/>
+    3.1 Page Layout <br/>
+    3.2 Excel file<br/>
+    3.3 Intractability<br/>
+4. Important code functions<br/>
+    4.1 Python functions<br/>
+    4.2 Python start code<br/>
+5. Testing<br/>
+Responsiveness testing
+Browser compatibility
+Bugs resolved and unresolved
+Lighthouse testing outcomes
+Code validation
+    5.1 Manual testing<br/>
+    5.2 Other tests<br/>
+6. Issues & Bugs<br/>
+    6.1 Resolved issues<br/>
+    6.2 Unresolved issues<br/>
+    6.3 Possible future developments<br/>
+7. Deployment<br/>
+    7.1 Heroku deployment<br/>
+    7.2 ElephantSQL creation<br/>
+    7.3 Database creation<br/>
+8. Credits<br/>
+    8.1 Credits<br/>
+    8.2 References<br/>
+    8.3 Thanks<br/>
+
+-------------
+
+## 1. The basics of Smitty's
+
+#### 1.1 Brief introduction
+
+The Smitty’s Bar & Restaurant website is a website for a fictitious bar that contains a login system and a booking system to store reservations. I designed the pub layout myself. User can sign up, log in, book a table and look around at all that this pub has to offer.
+
+#### 1.2 Basic mechanics
+
+The website was created using the following:
+
+- [Bootstrap framework Restaurantly](https://bootstrapmade.com/restaurantly-restaurant-template/) for the framework of the website
+- [Django Python framework](https://www.djangoproject.com) as the progaming language
+- [ElephantSQL](https://www.elephantsql.com/) for the connection to the database
+- [Heroku](https://www.heroku.com) or the deployment of the website
+
+#### 1.3 Link to the website
+
+The website can be found [here](https://smittys-bd7d75f32e46.herokuapp.com/)
+
+--------------
+
+## 2. Planning
+
+#### 2.1 Ideas and UX Design
+
+**Ideas**
+
+
+
+#### 2.2 User Stories
+
+--------------
+
+## Include
 
 - Layout and Navigation
 - Programs and tools
@@ -154,11 +229,18 @@ There are many missing parts to the website:
 - The style.css file contains code that is not used and maybe even isn't connected.
 - There are styling inconsistencies on the 'login.html' page
 
+- drinks section of index. links not rotatable
+
 #### Problems
 
 - [Crispy](https://github.com/Dandresfsoto/crispy-forms-materialize/issues/13>)
 https://django-crispy-forms.readthedocs.io/en/latest/form_helper.html
 Temporarily removed Crispy
+
+- Origin checking failed - does not match any trusted origins
+[Add "CSRF_TRUSTED_ORIGINS =" to settings](https://stackoverflow.com/questions/38841109/csrf-validation-does-not-work-on-django-using-https)
+Changed to workspace link, then it should be changed to deloyed link address
+
 ---
 
 ## My feedback
