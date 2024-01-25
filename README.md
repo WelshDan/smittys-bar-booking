@@ -137,6 +137,7 @@ This is the first screen upon opening the website. The homepage can also be acce
 
 These links are:
 
+- SMITTY'S
 - Home
 - How to book
 - Menu
@@ -144,38 +145,53 @@ These links are:
 - Events
 - Gallery
 - Contact
+- Register/Login (When not logged in)
+- Book a table/Logout (When logged in)
 
 ##### Home "hero section"
+
+The navbar appears on all pages.
+
+The logo can be clicked on to return to the homepage:
+
+![Screenshot](static/assets/img/README/nav_logo.jpg "Main page hero logo")
 
 This part of the webpage shows two buttons that change depending on whether the user is logged in or not.
 
 This is the page in its default position. Before logging in, the user can either choose to log in or sign up:
-![Screenshot](static/assets/img/README/index1.jpg" "Main page hero when logged in")
+
+![Screenshot](static/assets/img/README/homepage_start.jpg "Main page hero when not logged in")
 
 And this is the page after logging in, the user can now access the "Book a Table" page or choose to log out:
-![Screenshot](static/assets/img/README/login2.jpg "Main page hero when logged in")
 
-##### Other links on main page
+![Screenshot](static/assets/img/README/homepage_start_inlogged.jpg "Main page hero when logged in")
 
-The following links on the page are seen as follows:
+##### Links on main page
+
+The navbar links can be clicked on to jump straight to the sections or the user can just scroll downwards
 
 How to Book:
-![Screenshot](static/assets/img/README/index2.jpg "How to book")
+![Screenshot](static/assets/img/README/howtobook_navbar.jpg "How to book section of main page")
 
 Menu:
-![Screenshot](static/assets/img/README/index4.jpg "Food choices")
+![Screenshot](static/assets/img/README/menu_navbar.jpg "Menu section of the main page")
 
 Drinks:
-![Screenshot](static/assets/img/README/index5.jpg "Drinks choices")
+![Screenshot](static/assets/img/README/drinks_navbar.jpg "Drinks section of the main page")
 
 Events:
-![Screenshot](static/assets/img/README/index6.jpg "Drinks choices")
+![Screenshot](static/assets/img/README/events_navbar.jpg "Events section of the main page")
 
 Gallery:
-![Screenshot](static/assets/img/README/index7.jpg "Drinks choices")
+![Screenshot](static/assets/img/README/gallery_navbar.jpg "Gallery section of the main page")
 
 Contact Us:
-![Screenshot](static/assets/img/README/index8.jpg "Contact")
+![Screenshot](static/assets/img/README/index8.jpg "Contact section of the main page")
+
+**Footer section**
+
+Footer:
+![Screenshot](static/assets/img/README/homepage_footer.jpg "Footer section of the main page")
 
 #### Other html pages
 
