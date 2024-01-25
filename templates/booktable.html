@@ -19,13 +19,8 @@
                         {% csrf_token %}
 
                         {{ form.as_p }}
+                        {{ form.media }}
 
-                        <select class="form-select" id="select" aria-label="Default select example">
-                            <option selected>Choose a table</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
 
                         <input type="submit" value="Submit" class="btn-login animated fadeInUp scrollto">
 
@@ -107,12 +102,12 @@
                 </div>
             </div>
         </div>
-    </section>
-{% else %}
-    <h1>You must be logged in to view this page</h1>
-
-{% endif %}
-</body>
-<!-- End Book A Table Section -->
-
-{% endblock %}
+        </section>
+        {% else %}
+        <h1>You must be logged in to view this page</h1>
+        
+        {% endif %}
+        </body>
+        <!-- End Book A Table Section -->
+        
+        {% endblock %}

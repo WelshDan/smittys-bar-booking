@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from booking import views
+from booking import views as booking_views
 from users import views
 from allauth.socialaccount.models import SocialToken, SocialAccount, SocialApp
 
@@ -10,7 +10,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('base/', views.get_base, name='base'),
-    path('booktable/', views.get_booktable, name='booktable'),
+    path('booktable/', booking_views.reserve_table, name='booktable'),
     path('booking/', include('booking.urls')),
     path('users/', include('users.urls')),
 ]
