@@ -9,10 +9,6 @@ def get_base(request):
     return render(request, 'base.html')
 
 
-def get_booktable(request):
-    return render(request, 'booktable.html')
-
-
 def reserve_table(request):
     print("reserve_table ok")
     submitted = False
