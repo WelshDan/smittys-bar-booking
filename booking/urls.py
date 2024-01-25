@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from booking import views
 
 urlpatterns = [
-    path('reserve_table', views.reserve_table, name='reserve_table'),
+    path('reserve_table/', views.reserve_table, name='reserve_table'),
 ]
