@@ -31,7 +31,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "8000-welshdan-smittys-bar-boo-3nxmvquhse.us2.codeanyapp.com",
@@ -161,13 +161,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join((BASE_DIR, "assets"))
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
 
 STATIC_URL = '/static/'
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -181,4 +181,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_heroku.settings(locals())
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-welshdan-smittys-bar-boo-3nxmvquhse.us2.codeanyapp.com']
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-welshdan-smittys-bar-boo-3nxmvquhse.us2.codeanyapp.com',
+    'https://smittys-bd7d75f32e46.herokuapp.com'
+]

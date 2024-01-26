@@ -19,17 +19,12 @@ Edited in the Cross Platform Cloud IDE Codeanywhere <https://app.codeanywhere.co
     2.2 User Stories<br/>
 3. Layout<br/>
     3.1 Page Layout <br/>
-    3.2 Excel file<br/>
-    3.3 Log in details<br/>
+    3.2 Log in details<br/>
+    3.3 Programs and tools<br/>
 4. Important code functions<br/>
     4.1 Python functions<br/>
     4.2 Python start code<br/>
 5. Testing<br/>
-Responsiveness testing
-Browser compatibility
-Bugs resolved and unresolved
-Lighthouse testing outcomes
-Code validation
     5.1 Manual testing<br/>
     5.2 Other tests<br/>
 6. Issues & Bugs<br/>
@@ -39,7 +34,6 @@ Code validation
 7. Deployment<br/>
     7.1 Heroku deployment<br/>
     7.2 ElephantSQL creation<br/>
-    7.3 Database creation<br/>
 8. Credits<br/>
     8.1 Credits<br/>
     8.2 References<br/>
@@ -107,18 +101,6 @@ User Stories not closed:
 - As a **programmer** I can **create a mailing system** to **keep the user/owners update with bookings and any changes/cancellations**
 - As a **programmer** I can **create sufficient checks** to **enable the website to run without errors** (Manual checks were used instead of creating programmed checks)
 - As a **programmer** I can **create an upcoming events page** so that I can **inform the user of what future events are happening at the pub**
-
-## Include
-
-- Layout and Navigation
-- Programs and tools
-- Bugs, missing parts and issues
-- My feedback
-- Links, references and credits
-
-The initial aim of this website was to provide a website to a fictional bar that included log/sign in/out functions and could utilise the inbuilt admin tool of Django and the database functions of PostgreSQL.
-
-This is a website and so the only thing needed would be to sign up and log in.
 
 -----------
 
@@ -202,17 +184,16 @@ Footer:
 ##### Sign in page
 
 This page is accessed through the "Sign Up" button and then the aim was that upon entering the nesessary details, the user would have their details registered to the admin part of django and then the user would be logged in(see bugs):
-![Screenshot](static/assets/img/README/signup.jpg "Sign in")
+
+![Screenshot](static/assets/img/README/sign_up_page.jpg "Sign in page")
 
 ##### Log in page
 
 The aim here was that this should have been accessed through the "Log In" button and then entering a previously registered email address and password, the user would be logged in(see bugs):
-![Screenshot](static/assets/img/README/login1.jpg "Log in")
 
-#### 3.2 Excel file<br/>
+![Screenshot](static/assets/img/README/log_in_page.jpg "Log in page")
 
-
-#### 3.3 Log in details<br/>
+#### 3.2 Log in details
 
 Superuser:
 username: admin
@@ -224,11 +205,12 @@ email: testemailsmittysbar@gmail.com
 password: SmittysBar:2023
 
 Test User:
-dave@daveemail.com / Dave / Davis / Thursday:2023
+tom@dmail.com / Tom:2024
+sam@gmail.com / Sam:2024
 
----
+--------
 
-## Programs and tools
+## 3.3 Programs and tools
 
 #### Programs
 
@@ -252,22 +234,53 @@ The following have been used during this website:
 
 ----------
 
-4. Important code functions<br/>
-    4.1 Python functions<br/>
-    4.2 Python start code<br/>
+## 4. Important code functions<br/>
+
+#### 4.1 Python functions<br/>
+
+#### 4.2 Python start code<br/>
 
 ----------
 
-5. Testing<br/>
-Responsiveness testing
-Browser compatibility
-Bugs resolved and unresolved
-Lighthouse testing outcomes
-Code validation
+## 5. Testing
 
 ## 5.1 Manual testing
 
+| Nr | Section                         | Action                                                          | Expected result                                                                                                 | Correct outcome? |
+| -- | ------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ---------------- |
+| 1  | Home page                       | Load homepage (index.html)                                      | Page should load without errors and show login/sign up links                                                    | Yes              |
+|  2  | Home page                       | Click on Smitty’s logo (#hero)                                  | Page should reload without errors                                                                               | Yes              |
+|  3 | Home page                       | Click on Home (#hero)                                           | Page should reload without errors                                                                               | Yes              |
+|  4  | Home page                       | Click on How to Book (#howtobook)                               | Page should scroll down to How to Book section without errors                                                   | Yes              |
+|  5  | Home page                       | Click on Menu (#menu)                                           | Page should scroll down to Menu section without errors                                                          | Yes              |
+|  6  | Home page                       | Click on Drinks (#drinks)                                       | Page should scroll down to Drinks section without errors                                                        | Yes              |
+|  7  | Home page                       | Click on Events (#events)                                       | Page should scroll down to Events section without errors                                                        | Yes              |
+|  8  | Home page                       | Click on Gallery (#gallery)                                     | Page should scroll down to Gallery section without errors                                                       | Yes              |
+|  9  | Home page                       | Click on Contact (#contact)                                     | Page should scroll down to Contact section without errors                                                       | Yes              |
+| 10   | Home page                       | Click on Login button                                           | Login page should open up with errors                                                                           | Yes              |
+|  11  | Home page (Logged out) | Click on Log In in Hero section                                 | Login page should open up with errors                                                                           | Yes              |
+| 12   | Home page (Logged out) | Click on Sign Up in Hero section                                | Sign Up page should open up with errors                                                                         | Yes              |
+|  13  | Home page                       | In Menu section, click on Food tabs                             | Should change to the food tabs clicked on without errors                                                        | Yes              |
+| 14   | Home page                       | In Drinks section, click on Food tabs                           | Should change to the drinks tabs clicked on without errors                                                      | No               |
+|  15  | Home page                       | In Events section, click and slide through events               | Should slide through the events tabs clicked on without errors                                                  | Yes              |
+| 16   | Home page                       | In Gallery section, click on each photo                         | Photos should open without error                                                                                | Yes              |
+| 17   | Home page                       | In Contact section, map link should open new page to map        | Click on link and this should open up google maps                                                               | Yes              |
+| 18   | Home page                       | In Contact section, filling in a message should return an error | Contact us is not activated so filling in the form should return an error                                       | Yes              |
+| 19   | Home page                       | Click on restaurantly links at the bottom of the page           | Links should be deactivated so clicking should return the user to the top of the page                           | Yes              |
+| 20   | Home page                       | Click on logout button                                          | User should be                                                                                                  | No               |
+| 21   | Sign Up page                    | Enter details and click submit                                  | Details should be received and a new user created                                                               | No               |
+| 22   | Log in page                     | Enter email and password and click submit                       | User should then be logged in and returned to the homepage. The log out and booktable buttons should be visible | Yes              |
+| 23   | Log in page                     | Click Sign Up button                                            | Should be directed to sign up page                                                                              | No               |
+| 24   | Sign up page                    | Enter first name, surname, email and password and click submit  | User should then be signed up and returned to the log in page to log in.                                        | Yes              |
+| 25   | 404 page                        | Deliberately create an error                                    | Should be directed to 404 page                                                                                  | No               |
+
 ## 5.2 Other tests
+
+Manual Testing 26 - Known issue booktable form is not stoing bookings
+
+Lighthouse results:
+
+![Screenshot](static/assets/img/README/lighthouse.jpg "test results from lighthouse")
 
 -------------
 
@@ -275,28 +288,27 @@ Code validation
 
 #### 6.1 Resolved issues
 
+- Origin checking failed - does not match any trusted origins
+[Add "CSRF_TRUSTED_ORIGINS =" to settings](https://stackoverflow.com/questions/38841109/csrf-validation-does-not-work-on-django-using-https)
+Changed to workspace link, then it should be changed to deloyed link address
+
 #### 6.2 Unresolved issues
 
 **Bugs**
 
 - Message function is created and the code is added to the 'base.html' file but it does not load.
-
 - Models in booking and user apps are incorrectly titled as Reservations and Users, instead of Reservation and User
+- Lighthouse = page takes a long time to load, code needs to be cleansed
 
-**Missing Parts**
+**Missing Parts & Issues**
 
 There are many missing parts to the website:
 
-- PSQL database function not created
-- PSQL database tables not created
-- Table booking function on 'booktable.html' not created
-- The Contact US form is not connected
-
-**Issues**
-
+- PSQL database function not connected to booktable form
+- Table booking function on 'booktable.html' does not store information
+- (Manual Testing #18) The Contact US form is not connected
 - The style.css file contains code that is not used and maybe even isn't connected.
 - There are styling inconsistencies on the 'login.html' page
-
 - drinks section of index. links not rotatable
 
 #### 6.3 Possible future developments
@@ -307,22 +319,75 @@ There are many missing parts to the website:
 - (From User Stories) Link page layout to be able to select tables
 - (From User Stories) Enable users to book multiple tables
 
-#### Problems
-
-- [Crispy](https://github.com/Dandresfsoto/crispy-forms-materialize/issues/13>)
-https://django-crispy-forms.readthedocs.io/en/latest/form_helper.html
-Temporarily removed Crispy
-
-- Origin checking failed - does not match any trusted origins
-[Add "CSRF_TRUSTED_ORIGINS =" to settings](https://stackoverflow.com/questions/38841109/csrf-validation-does-not-work-on-django-using-https)
-Changed to workspace link, then it should be changed to deloyed link address
-
 ---------
 
-7. Deployment<br/>
-    7.1 Heroku deployment<br/>
-    7.2 ElephantSQL creation<br/>
-    7.3 Database creation<br/>
+## 7. Deployment
+
+#### 7.1 Github deployment
+
+**Steps to deploy in Github**
+
+To deploy in Github, you'll need to do the following things once logged in:
+
+- Choose your repository
+- Click on Settings
+- Click on Pages
+
+![Screenshot from github's "settings" page](static/assets/img/README/github_deployment_one.jpg "Github deployment ettings and pages")
+
+- Under Source, select "Deploy from a branch"
+
+![Screenshot from github's "pages" page](static/assets/img/README/github_deployment_two.jpg "Choose branch")
+
+- Under Branch, make sure your branch is set to "main" and then that the "/(root)" is selected
+- Save
+
+#### 7.2 Heroku deployment
+
+**Steps to deploy in Heroku**
+
+To deploy in Heroku, you'll need to do the following things once logged in:
+
+- Click on the "New" icon on the right-hand side of the page
+- Choose "Create new app"
+
+![Screenshot from the Heroku main page](static/assets/img/README/heroku_deploy_one.jpg "Heroku create new app")
+
+- Enter a name for your app
+- Choose your region (USA or Europe)
+- Click on "Create app"
+
+![Screenshot from the Heroku create app page](static/assets/img/README/heroku_deploy_two.jpg "Heroku enter app name")
+
+- Click to go to Settings
+- Click to open the Config Vars
+
+![Screenshot from the Heroku settings page](static/assets/img/README/heroku_deploy_three.jpg "Github deployment ettings and pages")
+
+  Add your specific config vars here:
+
+- CLOUDINARY_URL
+- DATABASE_URL
+- DISABLE_COLLECTSTAIC (only used during development)
+- POSTRESQL_DB
+- POSTGRESQL_ENGINE
+- SECRET_KEY
+
+![Screenshot from the Heroku config vars section](static/assets/img/README/heroku_deploy_four.jpg "Github deployment settings and pages")
+
+The final part to the deployment is to connect your Heroku app to Github:
+
+- Click on the Deploy tab
+- Select the "Deploy to Github" option in the middle
+- Make sure it is connected as shown in this final image
+
+![Screenshot from the Heroku deploy section](static/assets/img/README/heroku_deployment_final.jpg "deployed")
+
+Further information can be found on the Heroku site [here](https://devcenter.heroku.com/articles/git)
+
+#### 7.2 ElephantSQL creation
+
+Link to the creation of the ElephantSQL database can be found [here](https://www.elephantsql.com/docs/index.html)
 
 ----------
 
