@@ -13,7 +13,8 @@
                 <p>Book a Table</p>
             </div>
                 {% if submitted %}
-                    Your table was booked successfully
+                    Your table was booked successfully!
+                
                 {% else %}
                     <form action="" method="post">
                         {% csrf_token %}

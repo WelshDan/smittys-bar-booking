@@ -12,6 +12,7 @@ def get_base(request):
 def reserve_table(request):
     print("reserve_table ok")
     submitted = False
+    active_booking = False
     form = TableBookingForm()
     
     if request.method == "POST":
@@ -27,6 +28,7 @@ def reserve_table(request):
         if 'submitted' in request.GET:
             print("if 'submitted' in request.GET ok")
             submitted = True
+            active_booking = True
     return render(request, 'booktable.html', {'form':form, 'submitted':submitted})
 
 
