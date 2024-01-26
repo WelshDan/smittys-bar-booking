@@ -1,0 +1,176 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>{% block head_title %}Smitty's Bar and Restaurant{% endblock %}</title>
+    <meta content="Stockholm's No.1 Bar & Restaurant" name="description" />
+    <meta content="Stockholm, bar, nightlife, events, music, restaurant, booking" name="keywords" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Favicons -->
+    <link rel="icon" href="{% static 'assets/img/favicon32.png' %}" />
+    <link rel="apple-touch-icon" href="{% static 'assets/img/apple-touch-icon.png' %}" />
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet" />
+
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/animate.css/animate.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/aos/aos.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" />
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}" />
+</head>
+
+<body>
+    <!-- ======= Top Bar ======= -->
+    <div id="topbar" class="d-flex align-items-center fixed-top">
+        <div class="container d-flex justify-content-center justify-content-md-between">
+            <div class="contact-info d-flex align-items-center">
+                <i class="bi bi-phone d-flex align-items-center"><span>+46 811 223344</span></i>
+                <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Wed: 11.00 - 23.00 | Thu-Sun: 11.00 -
+                        01.00</span></i>
+            </div>
+        </div>
+    </div>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-cente">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+            <h1 class="logo me-auto me-lg-0">
+                <a href="{% url 'index' %}">Smitty's</a>
+            </h1>
+            <!-- .navbar -->
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li>
+                        <a class="nav-link scrollto active" href="{% url 'index' %}#hero">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link scrollto" href="{% url 'index' %}#howtobook">How to Book</a>
+                    </li>
+                    <li>
+                        <a class="nav-link scrollto" href="{% url 'index' %}#menu">Menu</a>
+                    </li>
+                    <li>
+                        <a class="nav-link scrollto" href="{% url 'index' %}#drinks">Drinks</a>
+                    </li>
+                    <li>
+                        <a class="nav-link scrollto" href="{% url 'index' %}#events">Events</a>
+                    </li>
+                    <li>
+                        <a class="nav-link scrollto" href="{% url 'index' %}#gallery">Gallery</a>
+                    </li>
+                    <li>
+                        <a class="nav-link scrollto" href="{% url 'index' %}#contact">Contact</a>
+                    </li>
+                    <!-- Log In or Log Out button -->
+                    {% if user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'booktable' %}" class="btn-login animated fadeInUp scrollto">Book a Table</a>
+                    </li>
+                    <li>
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}"
+                            class="btn-logout animated fadeInUp scrollto" aria-current="page"
+                            href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}"
+                            class="btn-signup animated fadeInUp scrollto" aria-current="page"
+                            href="{% url 'account_signup' %}">Sign Up</a>
+                    </li>
+                    <li>
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}"
+                            class="btn-login animated fadeInUp scrollto" aria-current="page"
+                            href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+
+    </header>
+
+<!-- ======= Check if logged in ======= -->
+{% if user.is_authenticated %}
+
+<section id="login" class="login">
+    <div class="container section" data-aos="fade-up">
+        <div class="section-title">
+            <h1>Sorry, you've hit an error 404</h1>
+            <p>Something has gone wrong. Use the menu bar to navigate to another page</p>
+        </div>
+        <div class="section-title">
+            <div class="btns">
+                <a href="{% url 'login' %}" class="btn-login animated fadeInUp scrollto">Log In</a>
+            </div>
+        </div>
+        <div class="section-title">
+            <h2>Log out</h2>
+            <p>Click here to log out</p>
+        </div>
+    </div>
+    <div class="btns">
+        <a href="{% url 'logout' %}" class="btn-signup animated fadeInUp scrollto">Sign Up</a>
+    </div>
+</section>
+{% else %}
+<!-- ======= Log in Section ======= -->
+<section id="login" class="login">
+    <div class="container section" data-aos="fade-up">
+        <div class="row">
+            <div class="col-md-8 mt-3 offset-md-2">
+                <div class="section-title">
+                    <h2>{% trans "Log in" %}</h2>
+                    <p>{% blocktrans %}Enter your email address and password{% endblocktrans %}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 mt-3 offset-md-2">
+                <form action="{% url 'account_login' %}" method="POST" class="login-form" data-aos="fade-up" data-aos-delay="100">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 form-group mt-3 mt-md-0">
+                            <input type="email" name="email" class="form-control" placeholder="Email" data-rule="minlen:4"
+                                data-msg="Please enter your email address" required />
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 form-group mt-3 mt-md-0">
+                            <input type="password" class="form-control" name="password" placeholder="Password"
+                                data-rule="password" data-msg="Please enter your password" required />
+                            <div class="validate"></div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 form-group bt-submit animated fadeInUp scrollto text-center">
+                            <button type="submit">{% trans "Log in" %}</button>
+                        </div>
+                        <div class="section-title">
+                            <div class="signup-title">
+                                <h2>{% trans "Sign up" %}</h2>
+                                <p>{% blocktrans %}Click here to sign up{% endblocktrans %}</p>
+                            </div>
+                            <div class="btns">
+                                <a href="{% url 'account_signup' %}" class="btn-signup animated fadeInUp scrollto">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endblock %}

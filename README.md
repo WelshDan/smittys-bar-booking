@@ -20,7 +20,7 @@ Edited in the Cross Platform Cloud IDE Codeanywhere <https://app.codeanywhere.co
 3. Layout<br/>
     3.1 Page Layout <br/>
     3.2 Excel file<br/>
-    3.3 Intractability<br/>
+    3.3 Log in details<br/>
 4. Important code functions<br/>
     4.1 Python functions<br/>
     4.2 Python start code<br/>
@@ -51,7 +51,7 @@ Code validation
 
 #### 1.1 Brief introduction
 
-The Smitty’s Bar & Restaurant website is a website for a fictitious bar that contains a login system and a booking system to store reservations. I designed the pub layout myself. User can sign up, log in, book a table and look around at all that this pub has to offer.
+The Smitty’s Bar & Restaurant website is a website for a fictitious bar that contains a login system and a booking system to store reservations. I designed the pub layout myself. Users can sign up, log in, book a table and look around at all that this pub has to offer.
 
 #### 1.2 Basic mechanics
 
@@ -79,7 +79,9 @@ Also with the bootstrap website being so advanced it actually made the process a
 
 **UX Design**
 
+This flowchart was created to show a simplified version of the main pages involved in the project
 
+![Screenshot](static/assets/img/README/smittys_flowchart.png "Flowchart plan of the website layout")
 
 #### 2.2 User Stories
 
@@ -103,7 +105,7 @@ User Stories not chosen:
 User Stories not closed:
 
 - As a **programmer** I can **create a mailing system** to **keep the user/owners update with bookings and any changes/cancellations**
-- As a **programmer** I can **create sufficient checks** to **enable the website to run without errors**
+- As a **programmer** I can **create sufficient checks** to **enable the website to run without errors** (Manual checks were used instead of creating programmed checks)
 - As a **programmer** I can **create an upcoming events page** so that I can **inform the user of what future events are happening at the pub**
 
 ## Include
@@ -118,20 +120,22 @@ The initial aim of this website was to provide a website to a fictional bar that
 
 This is a website and so the only thing needed would be to sign up and log in.
 
-### Layout and Navigation
+-----------
 
-The website has 4 navigational pages:
+## 3. Layout
+
+#### 3.1 HTML pages
+
+The website has 4 navigational HTML pages:
 
 | 'html' Page Name         |          Accessed how?          |
 | ------------------------ | :-----------------------------: |
 | 'index' Home             | Loading homepage, 'logging out' |
-| 'login' Login            |   Clicking on 'log in' button   |
-| 'signup' Sign Up         |  Clicking on 'sign up' button   |
-| 'booktable' Book-a-table | Clicking on 'Book table' button |
+| 'login' Login            |   Clicking on 'Log in' button   |
+| 'signup' Sign Up         |  Clicking on 'Sign up' button   |
+| 'booktable' Book-a-table | Clicking on 'Book a table' button |
 
-#### The html pages
-
-##### Homepage start up screen
+#### Homepage start up screen
 
 This is the first screen upon opening the website. The homepage can also be accessed at any time by clicking on "SMITTY'S BAR & RESTAURANT" located to the left of the the links. It can be scrolled down and also has working links found across the top of the header.
 
@@ -193,7 +197,7 @@ Contact Us:
 Footer:
 ![Screenshot](static/assets/img/README/homepage_footer.jpg "Footer section of the main page")
 
-#### Other html pages
+### Other html pages
 
 ##### Sign in page
 
@@ -204,6 +208,23 @@ This page is accessed through the "Sign Up" button and then the aim was that upo
 
 The aim here was that this should have been accessed through the "Log In" button and then entering a previously registered email address and password, the user would be logged in(see bugs):
 ![Screenshot](static/assets/img/README/login1.jpg "Log in")
+
+#### 3.2 Excel file<br/>
+
+
+#### 3.3 Log in details<br/>
+
+Superuser:
+username: admin
+email: admin@email.com
+Password: admin
+
+Email Smittys Bar:
+email: testemailsmittysbar@gmail.com
+password: SmittysBar:2023
+
+Test User:
+dave@daveemail.com / Dave / Davis / Thursday:2023
 
 ---
 
@@ -229,35 +250,40 @@ The following have been used during this website:
 
 - Bootstrap
 
-#### Log in profiles and profiles used during production
+----------
 
-Superuser:
-username: admin
-email: admin@email.com
-Password: admin
+4. Important code functions<br/>
+    4.1 Python functions<br/>
+    4.2 Python start code<br/>
 
-Email Smittys Bar:
-email: testemailsmittysbar@gmail.com
-password: SmittysBar:2023
+----------
 
-Test User:
-dave@daveemail.com / Dave / Davis / Thursday:2023
+5. Testing<br/>
+Responsiveness testing
+Browser compatibility
+Bugs resolved and unresolved
+Lighthouse testing outcomes
+Code validation
 
----
+## 5.1 Manual testing
 
-## Bugs, missing parts and issues
+## 5.2 Other tests
 
-There are sadly many bugs, issues and missing parts to this website.
+-------------
 
-#### Bugs
+## 6. Issues & Bugs
 
-- Upon entering login email and password, the html pages doesn't log the user in.
-- Upon entering signing in email and password, there is an error code
+#### 6.1 Resolved issues
+
+#### 6.2 Unresolved issues
+
+**Bugs**
+
 - Message function is created and the code is added to the 'base.html' file but it does not load.
 
 - Models in booking and user apps are incorrectly titled as Reservations and Users, instead of Reservation and User
 
-#### Missing Parts
+**Missing Parts**
 
 There are many missing parts to the website:
 
@@ -266,12 +292,20 @@ There are many missing parts to the website:
 - Table booking function on 'booktable.html' not created
 - The Contact US form is not connected
 
-#### Issues
+**Issues**
 
 - The style.css file contains code that is not used and maybe even isn't connected.
 - There are styling inconsistencies on the 'login.html' page
 
 - drinks section of index. links not rotatable
+
+#### 6.3 Possible future developments
+
+- Updated drinks and food menus
+- (From User Stories) Create a mailing system to inform of bookings and cancelltions
+- (From User Stories) Create an upcoming events page
+- (From User Stories) Link page layout to be able to select tables
+- (From User Stories) Enable users to book multiple tables
 
 #### Problems
 
@@ -283,22 +317,26 @@ Temporarily removed Crispy
 [Add "CSRF_TRUSTED_ORIGINS =" to settings](https://stackoverflow.com/questions/38841109/csrf-validation-does-not-work-on-django-using-https)
 Changed to workspace link, then it should be changed to deloyed link address
 
----
+---------
 
-## My feedback
+7. Deployment<br/>
+    7.1 Heroku deployment<br/>
+    7.2 ElephantSQL creation<br/>
+    7.3 Database creation<br/>
 
-#### My feedback
+----------
 
-I can diplomatically say that this has been a challenge. I have learnt so much from the negative parts I've experienced during this project, to an almost life-changing level.
-This project needed a simpler base bootstrap template, less time on the stylings and more time on the functionalities.
+## 8. Credits, References & Thanks<br/>
 
----
+## 8.1 Credits
 
-## Links, references and credits
+Mentor: Akshat Garg
+Fiverr debugger: Haris (coodingmentore)
+Tutor Support: Gemma, Sean, Roman and John
 
-#### Links and references
+## 8.2 References
 
-- \*Bootstrap template:
+- Bootstrap template:
   Template Name: Restaurantly
   Template URL: <https://bootstrapmade.com/restaurantly-restaurant-template/>
   Link: <https://github.com/technext/restaurantly/releases/download/v1.0/Restaurantly.zip>
@@ -319,18 +357,13 @@ This project needed a simpler base bootstrap template, less time on the stylings
 
 - Youtube online guides and tutorials: Codemy.com
 
-#### Credits
-
-Mentor: Akshat Garg
-Fiverr debugger: Haris (coodingmentore)
-
 [connecting heroku and django](https://www.youtube.com/watch?v=UkokhawLKDU)
 import django_heroku
 from decouple import config
 installed pipreqs to only use reqs that are necessary
 installed piptools to combine
 
-[adding datetimepicker] (https://pypi.org/project/django-bootstrap-datepicker-plus)
+[adding datetimepicker] (<https://pypi.org/project/django-bootstrap-datepicker-plus>)
 added datepicker using pip install django-bootstrap-datepicker-plus
 install pip install django-bootstrap-v5
 [adding datetimepicker usage](https://django-bootstrap-datepicker-plus.readthedocs.io/en/latest/Usage.html#model-form-usage)
@@ -341,3 +374,7 @@ installing db in postgresql using Code Institute module [Database Management Sys
 issues with migrations - Tutor Assistance (Holly) - migrations deleted and elephantsql database reset, then migrations rerun date 220124
 NEW SUPERUSER: admin/admin
 Test users: Alan/Alans/alan@gmail.com/Alan:2024
+
+## 8.3 Thanks
+
+Thanks to the assessors for their feedback and guidance. Thanks to my family for their support and patience.

@@ -16,7 +16,6 @@ def login_user(request):
             login(request, user)
             return redirect('index')
         else:
-            messages.error(request, "That did not work! Please try again")
             return redirect('login')
             
     else:
@@ -41,7 +40,6 @@ def signup_user(request):
             # Authentication
             user = authenticate(request, email=email, password=password)
             login(request, user)
-            messages.success(request, "Sign up successful!")
         return redirect('index')
     else:
         form = RegisterForm()
@@ -50,7 +48,6 @@ def signup_user(request):
 
 
 def get_index(request):
-    messages.success(request, "That did not work! Please try again")
     return render(request, 'index.html')
 
 
