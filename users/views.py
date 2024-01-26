@@ -4,6 +4,8 @@ from django.contrib import messages
 from .forms import RegisterForm
 from django.contrib.auth.forms import UserCreationForm
 
+def error_404_view(request, exception):
+    return render(request, '404.html')
 
 def login_user(request):
     # Check if logging in

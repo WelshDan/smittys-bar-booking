@@ -23,3 +23,6 @@ admin.site.site_title = "Smitty's Bar & Restaurant Admin"
 admin.site.unregister(SocialToken)
 admin.site.unregister(SocialAccount)
 admin.site.unregister(SocialApp)
+
+
+handler404 = 'users.views.error_404_view'

@@ -336,44 +336,44 @@ Tutor Support: Gemma, Sean, Roman and John
 
 ## 8.2 References
 
-- Bootstrap template:
+  Bootstrap template:
   Template Name: Restaurantly
   Template URL: <https://bootstrapmade.com/restaurantly-restaurant-template/>
   Link: <https://github.com/technext/restaurantly/releases/download/v1.0/Restaurantly.zip>
   Author: BootstrapMade.com
   License: <https://bootstrapmade.com/license/>
 
-- Help installing allauth:
+  Help installing allauth:
   Code with Stein <https://www.google.com/search?sca_esv=567555228&rlz=1C1CHBD_svSE1043SE1044&q=linking+django+allauth&tbm=vid&source=lnms&sa=X&ved=2ahUKEwjFjeKh9b2BAxUbRvEDHSdhA7MQ0pQJegQIChAB&biw=1536&bih=735&dpr=1.25#fpstate=ive&vld=cid:54078088>
 
-- Pictures:
+  Pictures:
   Pixabay <https://pixabay.com/>
 
-- Help with authentication upon login:
+  Help with authentication upon login:
   djangoproject.com <https://docs.djangoproject.com/en/4.2/topics/auth/default/#auth-web-requests>
 
-- Help with postgresql connection:
+  Help with postgresql connection:
   Profile: "Pretty Printed" <https://www.youtube.com/watch?v=t6RbanOhna4>
 
-- Youtube online guides and tutorials: Codemy.com
+  Youtube online guides and tutorials: Codemy.com
 
 [connecting heroku and django](https://www.youtube.com/watch?v=UkokhawLKDU)
-import django_heroku
-from decouple import config
-installed pipreqs to only use reqs that are necessary
-installed piptools to combine
+- import django_heroku
+- from decouple import config
+- installed pipreqs to only use reqs that are necessary
+- installed piptools to combine
 
 [adding datetimepicker] (<https://pypi.org/project/django-bootstrap-datepicker-plus>)
-added datepicker using pip install django-bootstrap-datepicker-plus
-install pip install django-bootstrap-v5
-[adding datetimepicker usage](https://django-bootstrap-datepicker-plus.readthedocs.io/en/latest/Usage.html#model-form-usage)
-installed pip install django-crispy-forms to run datetimepicker
+- added datepicker using pip install django-bootstrap-datepicker-plus
+- install pip install django-bootstrap-v5
 
-models.py [datetime](https://stackoverflow.com/questions/2029295/django-datefield-default-options)
+[adding datetimepicker usage](https://django-bootstrap-datepicker-plus.readthedocs.io/en/latest/Usage.html#model-form-usage)
+- installed pip install django-crispy-forms to run datetimepicker
+
+[datetime](https://stackoverflow.com/questions/2029295/django-datefield-default-options)
 installing db in postgresql using Code Institute module [Database Management Systems](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DB101+2021_T1/courseware/c0c31790fcf540539fd2bd3678b12406/87ffa16374c74c55b202724586a834c9/?child=last)
+
 issues with migrations - Tutor Assistance (Holly) - migrations deleted and elephantsql database reset, then migrations rerun date 220124
-NEW SUPERUSER: admin/admin
-Test users: Alan/Alans/alan@gmail.com/Alan:2024
 
 ## 8.3 Thanks
 
