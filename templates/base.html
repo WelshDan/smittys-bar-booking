@@ -85,6 +85,12 @@
           <i class="bi bi-clock d-flex align-items-center ms-4"
             ><span> Mon-Wed: 11.00 - 23.00 | Thu-Sun: 11.00 - 01.00</span></i
           >
+          {% if user.is_authenticated %}
+          <i class="bi bi-person-badge d-flex align-items-center ms-4"
+            ><span>Logged in as {{user.username}}</span></i
+          >
+          {% else %}
+          {% endif %}
         </div>
       </div>
     </div>
