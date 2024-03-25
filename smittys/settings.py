@@ -31,10 +31,10 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    "8000-welshdan-smittys-bar-boo-3nxmvquhse.us2.codeanyapp.com",
+    "8000-welshdan-smittysbarbook-h2u5ylgzflv.ws-eu110.gitpod.io",
     "smittys-bd7d75f32e46.herokuapp.com",
     "localhost",
 ]
@@ -182,6 +182,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-welshdan-smittys-bar-boo-3nxmvquhse.us2.codeanyapp.com',
+    'https://8000-welshdan-smittysbarbook-h2u5ylgzflv.ws-eu110.gitpod.io',
     'https://smittys-bd7d75f32e46.herokuapp.com'
 ]
