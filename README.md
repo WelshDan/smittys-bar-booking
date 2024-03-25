@@ -205,7 +205,7 @@ email: testemailsmittysbar@gmail.com
 password: SmittysBar:2023
 
 Test User:
-tom@dmail.com / Tom:2024
+tom@gmail.com / Tom:2024
 sam@gmail.com / Sam:2024
 
 --------
@@ -314,7 +314,7 @@ There are many missing parts to the website:
 #### 6.3 Possible future developments
 
 - Updated drinks and food menus
-- (From User Stories) Create a mailing system to inform of bookings and cancelltions
+- (From User Stories) Create a mailing system to inform of bookings and cancellations
 - (From User Stories) Create an upcoming events page
 - (From User Stories) Link page layout to be able to select tables
 - (From User Stories) Enable users to book multiple tables
