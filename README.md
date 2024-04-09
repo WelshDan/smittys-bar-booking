@@ -446,3 +446,18 @@ Thanks to the assessors for their feedback and guidance. Thanks to my family for
 
 ISSUES
 changed requirements to show backports.zoneinfo==0.2.1;python_version<"3.9" instead of backports.zoneinfo==0.2.1 to correct startup issue
+
+messages, update settings with message tags...
+MESSAGE_TAGS = {
+
+        messages.DEBUG: 'alert-info',
+
+        messages.INFO: 'alert-info',
+
+        messages.SUCCESS: 'alert-success',
+
+        messages.WARNING: 'alert-warning',
+
+        messages.ERROR: 'alert-danger',
+
+    }
