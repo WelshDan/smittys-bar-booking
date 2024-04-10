@@ -440,6 +440,8 @@ installing db in postgresql using Code Institute module [Database Management Sys
 
 issues with migrations - Tutor Assistance (Holly) - migrations deleted and elephantsql database reset, then migrations rerun date 220124
 
+adding users email to forms - Keith Herne
+
 ## 8.3 Thanks
 
 Thanks to the assessors for their feedback and guidance. Thanks to my family for their support and patience.
