@@ -10,12 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+from pathlib import Path
 import os
 import cloudinary_storage
 import django_heroku
 import dj_database_url
 from decouple import config
-from pathlib import Path
 
 if os.path.isfile('env.py'):
     import env
@@ -111,16 +111,8 @@ WSGI_APPLICATION = 'smittys.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'xouboegf',
-        'USER': 'xouboegf',
-        'PASSWORD': 'crZrf5-CN_i36WlaXmB-5pydBwNH8W6G',
-        'HOST': 'snuffleupagus.db.elephantsql.com',
-        'PORT': '5432',
-    }
+    "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

@@ -4,7 +4,7 @@ Bootstrapped using the Restaurantly website template available from <https://boo
 
 Edited in the Cross Platform Cloud IDE Codeanywhere <https://app.codeanywhere.com/>
 
-![Screenshot](static/assets/img/smittys-logo.jpg "Smitty Logo")
+![Screenshot](static/img/smittys-logo.jpg "Smitty Logo")
 
 ---------------
 
@@ -75,7 +75,7 @@ Also with the bootstrap website being so advanced it actually made the process a
 
 This flowchart was created to show a simplified version of the main pages involved in the project
 
-![Screenshot](static/assets/img/README/smittys_flowchart.png "Flowchart plan of the website layout")
+![Screenshot](static/img/README/smittys_flowchart.png "Flowchart plan of the website layout")
 
 #### 2.2 User Stories
 
@@ -140,44 +140,44 @@ The navbar appears on all pages.
 
 The logo can be clicked on to return to the homepage:
 
-![Screenshot](static/assets/img/README/nav_logo.jpg "Main page hero logo")
+![Screenshot](static/img/README/nav_logo.jpg "Main page hero logo")
 
 This part of the webpage shows two buttons that change depending on whether the user is logged in or not.
 
 This is the page in its default position. Before logging in, the user can either choose to log in or sign up:
 
-![Screenshot](static/assets/img/README/homepage_start.jpg "Main page hero when not logged in")
+![Screenshot](static/img/README/homepage_start.jpg "Main page hero when not logged in")
 
 And this is the page after logging in, the user can now access the "Book a Table" page or choose to log out:
 
-![Screenshot](static/assets/img/README/homepage_start_inlogged.jpg "Main page hero when logged in")
+![Screenshot](static/img/README/homepage_start_inlogged.jpg "Main page hero when logged in")
 
 ##### Links on main page
 
 The navbar links can be clicked on to jump straight to the sections or the user can just scroll downwards
 
 How to Book:
-![Screenshot](static/assets/img/README/howtobook_navbar.jpg "How to book section of main page")
+![Screenshot](static/img/README/howtobook_navbar.jpg "How to book section of main page")
 
 Menu:
-![Screenshot](static/assets/img/README/menu_navbar.jpg "Menu section of the main page")
+![Screenshot](static/img/README/menu_navbar.jpg "Menu section of the main page")
 
 Drinks:
-![Screenshot](static/assets/img/README/drinks_navbar.jpg "Drinks section of the main page")
+![Screenshot](static/img/README/drinks_navbar.jpg "Drinks section of the main page")
 
 Events:
-![Screenshot](static/assets/img/README/events_navbar.jpg "Events section of the main page")
+![Screenshot](static/img/README/events_navbar.jpg "Events section of the main page")
 
 Gallery:
-![Screenshot](static/assets/img/README/gallery_navbar.jpg "Gallery section of the main page")
+![Screenshot](static/img/README/gallery_navbar.jpg "Gallery section of the main page")
 
 Contact Us:
-![Screenshot](static/assets/img/README/index8.jpg "Contact section of the main page")
+![Screenshot](static/img/README/index8.jpg "Contact section of the main page")
 
 **Footer section**
 
 Footer:
-![Screenshot](static/assets/img/README/homepage_footer.jpg "Footer section of the main page")
+![Screenshot](static/img/README/homepage_footer.jpg "Footer section of the main page")
 
 ### Other html pages
 
@@ -185,13 +185,13 @@ Footer:
 
 This page is accessed through the "Sign Up" button and then the aim was that upon entering the nesessary details, the user would have their details registered to the admin part of django and then the user would be logged in(see bugs):
 
-![Screenshot](static/assets/img/README/sign_up_page.jpg "Sign in page")
+![Screenshot](static/img/README/sign_up_page.jpg "Sign in page")
 
 ##### Log in page
 
 The aim here was that this should have been accessed through the "Log In" button and then entering a previously registered email address and password, the user would be logged in(see bugs):
 
-![Screenshot](static/assets/img/README/log_in_page.jpg "Log in page")
+![Screenshot](static/img/README/log_in_page.jpg "Log in page")
 
 #### 3.2 Log in details
 
@@ -280,7 +280,7 @@ Manual Testing 26 - Known issue booktable form is not stoing bookings
 
 Lighthouse results:
 
-![Screenshot](static/assets/img/README/lighthouse.jpg "test results from lighthouse")
+![Screenshot](static/img/README/lighthouse.jpg "test results from lighthouse")
 
 -------------
 
@@ -333,11 +333,11 @@ To deploy in Github, you'll need to do the following things once logged in:
 - Click on Settings
 - Click on Pages
 
-![Screenshot from github's "settings" page](static/assets/img/README/github_deployment_one.jpg "Github deployment ettings and pages")
+![Screenshot from github's "settings" page](static/img/README/github_deployment_one.jpg "Github deployment ettings and pages")
 
 - Under Source, select "Deploy from a branch"
 
-![Screenshot from github's "pages" page](static/assets/img/README/github_deployment_two.jpg "Choose branch")
+![Screenshot from github's "pages" page](static/img/README/github_deployment_two.jpg "Choose branch")
 
 - Under Branch, make sure your branch is set to "main" and then that the "/(root)" is selected
 - Save
@@ -351,18 +351,18 @@ To deploy in Heroku, you'll need to do the following things once logged in:
 - Click on the "New" icon on the right-hand side of the page
 - Choose "Create new app"
 
-![Screenshot from the Heroku main page](static/assets/img/README/heroku_deploy_one.jpg "Heroku create new app")
+![Screenshot from the Heroku main page](static/img/README/heroku_deploy_one.jpg "Heroku create new app")
 
 - Enter a name for your app
 - Choose your region (USA or Europe)
 - Click on "Create app"
 
-![Screenshot from the Heroku create app page](static/assets/img/README/heroku_deploy_two.jpg "Heroku enter app name")
+![Screenshot from the Heroku create app page](static/img/README/heroku_deploy_two.jpg "Heroku enter app name")
 
 - Click to go to Settings
 - Click to open the Config Vars
 
-![Screenshot from the Heroku settings page](static/assets/img/README/heroku_deploy_three.jpg "Github deployment ettings and pages")
+![Screenshot from the Heroku settings page](static/img/README/heroku_deploy_three.jpg "Github deployment ettings and pages")
 
   Add your specific config vars here:
 
@@ -373,7 +373,7 @@ To deploy in Heroku, you'll need to do the following things once logged in:
 - POSTGRESQL_ENGINE
 - SECRET_KEY
 
-![Screenshot from the Heroku config vars section](static/assets/img/README/heroku_deploy_four.jpg "Github deployment settings and pages")
+![Screenshot from the Heroku config vars section](static/img/README/heroku_deploy_four.jpg "Github deployment settings and pages")
 
 The final part to the deployment is to connect your Heroku app to Github:
 
@@ -381,7 +381,7 @@ The final part to the deployment is to connect your Heroku app to Github:
 - Select the "Deploy to Github" option in the middle
 - Make sure it is connected as shown in this final image
 
-![Screenshot from the Heroku deploy section](static/assets/img/README/heroku_deployment_final.jpg "deployed")
+![Screenshot from the Heroku deploy section](static/img/README/heroku_deployment_final.jpg "deployed")
 
 Further information can be found on the Heroku site [here](https://devcenter.heroku.com/articles/git)
 
