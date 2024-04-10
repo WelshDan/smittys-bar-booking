@@ -14,12 +14,12 @@ def reserve_table(request):
     form = TableBookingForm()
     
     if request.method == "POST":
-        form = TableBookingForm(request.POST)
+        form = TableBookingForm(request.POST, user=request.user)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/reserve_table?submitted=True')
     else:
-        form = TableBookingForm()
+        form = TableBookingForm(user=request.user)
         if 'submitted' in request.GET:
             submitted = True
             active_booking = True
