@@ -440,7 +440,7 @@ installing db in postgresql using Code Institute module [Database Management Sys
 
 issues with migrations - Tutor Assistance (Holly) - migrations deleted and elephantsql database reset, then migrations rerun date 220124
 
-adding users email to forms - Keith Herne
+adding users email to forms & models (args and kwargs especially!)- Keith Herne
 
 ## 8.3 Thanks
 

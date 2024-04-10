@@ -1,8 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timezone
 from cloudinary.models import CloudinaryField
-from datetime import date
-from datetime import datetime
+from users.models import Customers
 
 TABLE_NUMBERS = (
     ('0', '0'),
@@ -54,8 +54,8 @@ TABLE_NUMBERS = (
 
 class Reservations(models.Model):
 
-    now = datetime.now()
-
+    now = timezone.now()
+    email = models.EmailField(Customers, default="", null=False, blank=False)
     booking_id = models.IntegerField(
         primary_key=True,
         auto_created = True,
@@ -72,5 +72,10 @@ class Reservations(models.Model):
     end_time = models.TimeField(default=now.hour, null=False, blank=False)
     active_booking = models.BooleanField()
 
+    def save(self, *args, **kwargs):
+        if not self.email:
+            self.email = self.user.email
+        super().save(*args, **kwargs)
+
     def __str__(self):
-        return self.name
+        return f"Reservation #{self.booking_id} - {self.user.username}"
