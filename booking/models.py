@@ -66,7 +66,7 @@ class Reservations(models.Model):
     date = models.DateField(max_length=20, null=False, blank=False)
     start_time = models.TimeField(default=now.hour, null=False, blank=False)
     end_time = models.TimeField(default=now.hour, null=False, blank=False)
-    active_booking = models.BooleanField()
+    active_booking = models.BooleanField(default=True)
 
     def save(self, *args, **kwargs):
         if not self.email:
@@ -74,4 +74,4 @@ class Reservations(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f"Reservation #{self.booking_id} - {self.user.username}"
+        return f"Reservation #{self.booking_id} - {self.email}"
