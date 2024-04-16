@@ -21,14 +21,15 @@ def reserve_table(request):
             return HttpResponseRedirect('/reserve_table?submitted=True')
     else:
         form = TableBookingForm(user=request.user)
+        user_bookings = Reservations.objects.filter(email=request.user.email).filter(active_booking=True)
         if 'submitted' in request.GET:
             submitted = True
             active_booking = True
-    return render(request, 'booktable.html', {'form':form, 'submitted':submitted})
+    return render(request, 'booktable.html', {'form':form, 'submitted':submitted, 'bookings': user_bookings})
 
 
 def get_bookings(request):
-    bookings = Reservations.objects.filter(is_active=True)
+    bookings = Reservations.objects.filter(active_booking=True)
     return render(request, 'booktable.html', {'bookings': bookings})
 
 

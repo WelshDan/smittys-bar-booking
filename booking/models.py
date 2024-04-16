@@ -53,7 +53,6 @@ TABLE_NUMBERS = (
 )
 
 class Reservations(models.Model):
-
     now = timezone.now()
     email = models.EmailField(Customers, default="", null=False, blank=False)
     booking_id = models.AutoField(primary_key=True)
