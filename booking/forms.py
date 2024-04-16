@@ -12,12 +12,6 @@ class TableBookingForm(forms.ModelForm):
         fields = ('email', 'table_number', 'date', 'start_time', 'end_time')
         widgets = {
             "date": DatePickerInput(options={"format": "MM/DD/YYYY"}),
-            "start_time": TimePickerInput(options={
-                "showSeconds": False,
-                "minuteStep": 30,
-                "defaultTime": "12:00"
-                }),
-            "end_time": TimePickerInput(range_from="start_time+1h"),
         }
 
     def __init__ (self, *args, **kwargs):

@@ -24,21 +24,23 @@
                             </tr>
                         </thead>
                         <tbody>
-                        {% for booking in bookings %}
+                            {% for booking in bookings %}
                             <tr>
                                 <td>{{ booking.id }}</td>
                                 <td>{{ booking.table_number }}</td>
                                 <td>{{ booking.date }}</td>
                                 <td>{{ booking.start_time }} to {{ booking.end_time }}</td>
-                                <<td><a href="/edit_reservation/{{ booking.id }}">
+                                <td><a href="/edit_reservation/{{ booking.id}}">
                                         <button>Edit</button>
                                     </a>
-                                </td> 
+                                </td>
                                 <td><button>Delete</button></td>
                             </tr>
                         </tbody>
                         {% empty %}
-                        <tr><td>No reservations</td></tr>
+                        <tr>
+                            <td>No reservations</td>
+                        </tr>
                         {% endfor %}
                     </table>
                 </div>
@@ -49,23 +51,23 @@
         <div class="container" data-aos="fade-up">
             <div class="section-title">
                 <h2>Reservation</h2>
-                <p>Book a Table</p>
+                <p>Edit booking</p>
             </div>
-                {% if submitted %}
-                    Your table was booked successfully!
-                
-                {% else %}
+            {% if submitted %}
+            Your table was updated successfully!
+
+            {% else %}
+            <form method="post">
+                {% csrf_token %}
+
+                {{ form.as_p }}
                 {{ form.media }}
-                    <form action="" method="post">
-                        {% csrf_token %}
-
-                        {{ form.as_p }}
 
 
-                        <input type="submit" value="Book" class="btn-login animated fadeInUp scrollto">
+                <input type="submit" value="Update" class="btn-login animated fadeInUp scrollto">
 
-                    </form>
-                {% endif %}
+            </form>
+            {% endif %}
         </div>
     </section>
     <section id="event_information" class=" event_information">
@@ -149,11 +151,11 @@
             </div>
         </div>
     </section>
-        {% else %}
-        <h1>You must be logged in to view this page</h1>
-        
-        {% endif %}
-        </body>
-        <!-- End Book A Table Section -->
-        
-        {% endblock %}
+    {% else %}
+    <h1>You must be logged in to view this page</h1>
+
+    {% endif %}
+</body>
+<!-- End Book A Table Section -->
+
+{% endblock %}
