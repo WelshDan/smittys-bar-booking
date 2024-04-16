@@ -34,7 +34,10 @@
                                         <button>Edit</button>
                                     </a>
                                 </td> 
-                                <td><button>Delete</button></td>
+                                <<td><a href="/delete_reservation/{{ booking.id }}">
+                                        <button>Delete</button>
+                                    </a>
+                                </td>
                             </tr>
                         </tbody>
                         {% empty %}
@@ -56,13 +59,12 @@
                 
                 {% else %}
                 {{ form.media }}
-                    <form action="" method="post">
+                    <form action="" method="POST" class="form-group">
                         {% csrf_token %}
 
                         {{ form.as_p }}
 
-
-                        <input type="submit" value="Book" class="btn-login animated fadeInUp scrollto">
+                        <button type="submit" class="btn-login animated fadeInUp scrollto">Create Booking</button>
 
                     </form>
                 {% endif %}

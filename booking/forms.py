@@ -11,9 +11,13 @@ class TableBookingForm(forms.ModelForm):
         model = Reservations
         fields = ('email', 'table_number', 'date', 'start_time', 'end_time')
         widgets = {
-            "date": DatePickerInput(options={"format": "MM/DD/YYYY"}),
-            "start_time": TimePickerInput(options={"format": "hh:mm"}),
-            "end_time": TimePickerInput(options={"format": "hh:mm"}),
+            "date": DatePickerInput(options={"format": "DD/MM/YYYY"}),
+            "start_time": TimePickerInput(options={
+                "format": "HH:MM",
+                "minHour": 12,
+                "maxHour": 23,
+            }),
+            "end_time": TimePickerInput(options={"format": "HH:MM"}),
         }
 
     def __init__ (self, *args, **kwargs):
