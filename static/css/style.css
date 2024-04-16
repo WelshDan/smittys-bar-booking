@@ -1818,7 +1818,7 @@ section {
 /*--------------------------------------------------------------
 # Book a Table Page
 --------------------------------------------------------------*/
-.active_bookings .section-title {
+.section-title {
     padding-top: 60px;
 }
 
