@@ -1822,6 +1822,18 @@ section {
     padding-top: 60px;
 }
 
+.table {
+    color: #fff;
+}
+
+.t-head {
+    font-weight: bold;
+}
+
+.table tr:last-child th, .table tr:last-child td {
+    border: none;
+}
+
 .booktable:before {
     content: "";
     background: rgba(0, 0, 0, 0.8);
