@@ -162,14 +162,27 @@
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
+      <!-- ======= Error Messages ======= -->
+      
+      <div class="messages-container">
+        <div class="row">
+          <div class="col-m8- offset-md-2">
+            {% for message in messages %}
+            <div class"alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+              {{ message | safe }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+              </button>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
         
     </header>
             {% block content %}
             <!-- Content Goes here -->
             {% endblock content %}
-    <!-- ======= Error Messages ======= -->
-    <!-- removed due to errors -->
-    </main>
+
     <!-- ======= Main Footer - links are not to be removed! ======= -->
     <footer id="footer" class="footer">
       <div class="container">

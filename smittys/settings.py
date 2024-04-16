@@ -15,8 +15,8 @@ import os
 import cloudinary_storage
 import django_heroku
 import dj_database_url
+from django.contrib.messages import constants as messages
 from decouple import config
-
 if os.path.isfile('env.py'):
     import env
 
@@ -64,10 +64,21 @@ INSTALLED_APPS = [
 ]
 
 SITE_ID = 1
+
+# Log in
+
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
-# Log in
+# Messages
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',

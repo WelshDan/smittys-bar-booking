@@ -1824,6 +1824,7 @@ section {
 
 .table {
     color: #fff;
+    border-bottom: none;
 }
 
 .t-head {
