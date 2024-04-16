@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
-from booking.models import Reservations
-from booking.forms import TableBookingForm
+from django.views.generic.edit import UpdateView, DeleteView
+from .models import Reservations
+from .forms import TableBookingForm
 
 
 def get_base(request):
@@ -27,9 +28,8 @@ def reserve_table(request):
 
 
 def get_bookings(request):
-    current_bookings = Reservations
-    if active_booking:
-        return render
+    bookings = Reservations.objects.filter(is_active=True)
+    return render(request, 'booktable.html', {'bookings': bookings})
 
 
 def get_index(request):

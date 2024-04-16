@@ -9,16 +9,25 @@
     <section id="active_bookings" class="active_bookings">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
-                <h2>Current Reservations</h2>
+                <h2>Your Reservations</h2>
                 <p>Here are your current reservations:</p>
-                {{get_bookings}}
+                <table>
+                    {% for booking in bookings %}
+                        <tr>
+                            <td>{{ booking.id }}</td>
+                            <td>{{ booking.table_number }}</td>
+                            <td>{{ booking.date }}</td>
+                            <td>{{ booking.start_time }} to {{ booking.end_time }}</td>
+                            <td><button>Edit</button></td>
+                            <td><button>Delete</button></td>
+                        </tr>
+                    {% empty %}
+                    <tr><td>To book a table, please use the form below</td></tr>
+                    {% endfor %}
+                </table>
             </div>
-            <button>
-                Change Booking
-            </button>
-            <button>
-                Delete Booking
-            </button>
+        </div>
+    </section>
 
     <section id="booktable" class="booktable">
         <div class="container" data-aos="fade-up">
