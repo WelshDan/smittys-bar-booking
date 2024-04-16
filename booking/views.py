@@ -26,6 +26,12 @@ def reserve_table(request):
     return render(request, 'booktable.html', {'form':form, 'submitted':submitted})
 
 
+def get_bookings(request):
+    current_bookings = Reservations
+    if active_booking:
+        return render
+
+
 def get_index(request):
     return render(request, 'index.html')
 

@@ -74,4 +74,4 @@ class Reservations(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f"Reservation #{self.booking_id} - {self.email}"
+        return f"Reservation #{self.booking_id} - Email {self.email} Table No {self.table_number} - Date {self.date} - From {self.start_time} - Till {self.end_time} - Active? {self.active_booking}"
