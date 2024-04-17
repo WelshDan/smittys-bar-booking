@@ -175,26 +175,26 @@
    * Menu isotope and filter
    */
   window.addEventListener('load', () => {
-    let menuContainer = select('.menu-container');
-    if (menuContainer) {
-      let menuIsotope = new Isotope(menuContainer, {
-        itemSelector: '.menu-item',
+    let drinksContainer = select('.drinks-container');
+    if (drinksContainer) {
+      let drinksIsotope = new Isotope(drinksContainer, {
+        itemSelector: '.drinks-item',
         layoutMode: 'fitRows'
       });
 
-      let menuFilters = select('#menu-flters li', true);
+      let drinksFilters = select('#drinks-flters li', true);
 
-      on('click', '#menu-flters li', function(e) {
+      on('click', '#drinks-flters li', function(e) {
         e.preventDefault();
-        menuFilters.forEach(function(el) {
+        drinksFilters.forEach(function(el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
 
-        menuIsotope.arrange({
+        drinksIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        menuIsotope.on('arrangeComplete', function() {
+        drinksIsotope.on('arrangeComplete', function() {
           AOS.refresh()
         });
       }, true);
