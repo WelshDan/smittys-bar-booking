@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from django.views.generic.edit import UpdateView, DeleteView
 from .models import Reservations
@@ -40,9 +40,9 @@ def edit_reservation(request, booking_id):
 
 
 def delete_reservation(request, booking_id):
-    booking = get_object_or_404(Reservations, pk=booking_id)
+    booking = Reservations.objects.get(pk=booking_id)
     booking.delete()
-    return HttpResponseRedirect('booktable.html', {'form':form, 'booking': booking})
+    return redirect('booktable')
 
 
 def get_bookings(request):
