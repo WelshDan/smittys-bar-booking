@@ -13,15 +13,15 @@ def reserve_table(request):
     submitted = False
     active_booking = False
     form = TableBookingForm()
+    user_bookings = Reservations.objects.filter(email=request.user.email).filter(active_booking=True)
     
     if request.method == "POST":
         form = TableBookingForm(request.POST, user=request.user)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/reserve_table?submitted=True')
+            return HttpResponseRedirect('/booktable')
     else:
         form = TableBookingForm(user=request.user)
-        user_bookings = Reservations.objects.filter(email=request.user.email).filter(active_booking=True)
         if 'submitted' in request.GET:
             submitted = True
             active_booking = True
@@ -29,14 +29,15 @@ def reserve_table(request):
 
 
 def edit_reservation(request, booking_id):
-    booking = get_object_or_404(Reservations, pk=booking_id)
+    user_bookings = Reservations.objects.filter(email=request.user.email).filter(active_booking=True)
+    booking = Reservations.objects.get(pk=booking_id)
     form = TableBookingForm(user=request.user, instance=booking)
     if request.method == "POST":
         form = TableBookingForm(request.POST, user=request.user, instance=booking)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/edit_reservation')
-    return render(request, 'edit_reservation.html', {'form':form, 'booking':booking})
+            return redirect('booktable')
+    return render(request, 'edit_reservation.html', {'form':form, 'booking':booking, 'bookings': user_bookings})
 
 
 def delete_reservation(request, booking_id):

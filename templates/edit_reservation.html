@@ -6,6 +6,29 @@
 <!-- ======= Update A Table Booking Section ======= -->
 
 <body>
+    <section id="reserved" class="reserve">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Reservation</h2>
+                <p>Edit booking</p>
+            </div>
+            {% if submitted %}
+            Your table was updated successfully!
+    
+            {% else %}
+            <form method="post">
+                {% csrf_token %}
+    
+                {{ form.as_p }}
+                {{ form.media }}
+    
+    
+                <input type="submit" value="Update" class="btn-login animated fadeInUp scrollto">
+    
+            </form>
+            {% endif %}
+        </div>
+    </section>
     <section id="active_bookings" class="active_bookings">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
@@ -48,29 +71,6 @@
                     </table>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="reserved" class="reserve">
-        <div class="container" data-aos="fade-up">
-            <div class="section-title">
-                <h2>Reservation</h2>
-                <p>Edit booking</p>
-            </div>
-            {% if submitted %}
-            Your table was updated successfully!
-
-            {% else %}
-            <form method="post">
-                {% csrf_token %}
-
-                {{ form.as_p }}
-                {{ form.media }}
-
-
-                <input type="submit" value="Update" class="btn-login animated fadeInUp scrollto">
-
-            </form>
-            {% endif %}
         </div>
     </section>
     <section id="event_information" class=" event_information">
