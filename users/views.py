@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 from .forms import RegisterForm
 from django.contrib.auth.forms import UserCreationForm
 
@@ -15,17 +16,21 @@ def login_user(request):
         user = authenticate(request, email=email, password=password)
         if user is not None:
             login(request, user)
+            messages.add_message(request, messages.SUCCESS,
+                ("You are now logged in."))
             return redirect('index')
         else:
-            return redirect('login')
-            
+            messages.add_message(request, messages.ERROR,
+                ("Something went wrong, please try again."))
+            return redirect('login')  
     else:
         return render(request, 'login.html', {})
 
 
 def logout_user(request):
     logout(request)
-    messages.success(request, "You are now logged out")
+    messages.add_message(request, messages.INFO,
+        ("You are now logged out"))
     return redirect('index')
 
 
@@ -41,10 +46,13 @@ def signup_user(request):
             # Authentication
             user = authenticate(request, email=email, password=password)
             login(request, user)
+            messages.add_message(request, messages.SUCCESS,
+                ("You are now logged out"))
         return redirect('index')
     else:
         form = RegisterForm()
-
+        messages.add_message(request, messages.ERROR,
+                ("Something went wrong, please try again."))
     return render(request, 'signup.html', {'form': form})
 
 

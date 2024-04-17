@@ -162,8 +162,11 @@
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
+        
+    </header>
+    <main>
       <!-- ======= Error Messages ======= -->
-      
+
       <div class="messages-container">
         <div class="row">
           <div class="col-m8- offset-md-2">
@@ -177,11 +180,12 @@
           </div>
         </div>
       </div>
-        
-    </header>
-            {% block content %}
-            <!-- Content Goes here -->
-            {% endblock content %}
+    
+    {% block content %}
+    <!-- Content Goes here -->
+    {% endblock content %}
+
+    </main>
 
     <!-- ======= Main Footer - links are not to be removed! ======= -->
     <footer id="footer" class="footer">
