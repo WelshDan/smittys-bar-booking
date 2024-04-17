@@ -29,20 +29,20 @@ def reserve_table(request):
 
 
 def edit_reservation(request, booking_id):
-    user_bookings = Reservations.objects.filter(email=request.user.email).filter(active_booking=True)
+    booking = get_object_or_404(Reservations, pk=booking_id)
     form = TableBookingForm(user=request.user, instance=booking)
     if request.method == "POST":
         form = TableBookingForm(request.POST, user=request.user, instance=booking)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/reserve_table?submitted=True')
-    return render(request, 'edit_reservation.html', {'form':form, 'submitted':submitted, 'bookings': user_bookings})
+            return HttpResponseRedirect('/edit_reservation')
+    return render(request, 'edit_reservation.html', {'form':form, 'booking':booking})
 
 
 def delete_reservation(request, booking_id):
-    booking = get_object_or_404(Reservations, id=booking_id)
+    booking = get_object_or_404(Reservations, pk=booking_id)
     booking.delete()
-    return HttpResponseRedirect('booktable.html', {'form':form, 'submitted':submitted, 'bookings': user_bookings})
+    return HttpResponseRedirect('booktable.html', {'form':form, 'booking': booking})
 
 
 def get_bookings(request):
