@@ -1,5 +1,5 @@
 from django import forms
-from bootstrap_datepicker_plus.widgets import DatePickerInput, TimePickerInput
+from bootstrap_datepicker_plus.widgets import DateTimePickerInput
 from booking.models import Reservations
 from crispy_forms.helper import FormHelper
 from users.models import Customers
@@ -10,9 +10,6 @@ class TableBookingForm(forms.ModelForm):
     class Meta:
         model = Reservations
         fields = ('email', 'table_number', 'date', 'start_time', 'end_time')
-        widgets = {
-            "date": DatePickerInput(options={"format": "DD/MM/YYYY"}),
-        }
 
     def __init__ (self, *args, **kwargs):
         user = kwargs.pop('user', None)
