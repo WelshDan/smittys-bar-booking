@@ -261,22 +261,22 @@ The following have been used during this website:
 |  11  | Home page (Logged out) | Click on Log In in Hero section                                 | Login page should open up with errors                                                                           | Yes              |
 | 12   | Home page (Logged out) | Click on Sign Up in Hero section                                | Sign Up page should open up with errors                                                                         | Yes              |
 |  13  | Home page                       | In Menu section, click on Food tabs                             | Should change to the food tabs clicked on without errors                                                        | Yes              |
-| 14   | Home page                       | In Drinks section, click on Food tabs                           | Should change to the drinks tabs clicked on without errors                                                      | No               |
+| 14   | Home page                       | In Drinks section, click on Food tabs                           | Should change to the drinks tabs clicked on without errors                                                      | Yes               |
 |  15  | Home page                       | In Events section, click and slide through events               | Should slide through the events tabs clicked on without errors                                                  | Yes              |
 | 16   | Home page                       | In Gallery section, click on each photo                         | Photos should open without error                                                                                | Yes              |
 | 17   | Home page                       | In Contact section, map link should open new page to map        | Click on link and this should open up google maps                                                               | Yes              |
 | 18   | Home page                       | In Contact section, filling in a message should return an error | Contact us is not activated so filling in the form should return an error                                       | Yes              |
 | 19   | Home page                       | Click on restaurantly links at the bottom of the page           | Links should be deactivated so clicking should return the user to the top of the page                           | Yes              |
-| 20   | Home page                       | Click on logout button                                          | User should be                                                                                                  | No               |
-| 21   | Sign Up page                    | Enter details and click submit                                  | Details should be received and a new user created                                                               | No               |
+| 20   | Home page                       | Click on logout button                                          | User should be logged out                                                                                                 | Yes               |
+| 21   | Sign Up page                    | Enter details and click submit                                  | Details should be received and a new user created                                                               | Yes               |
 | 22   | Log in page                     | Enter email and password and click submit                       | User should then be logged in and returned to the homepage. The log out and booktable buttons should be visible | Yes              |
-| 23   | Log in page                     | Click Sign Up button                                            | Should be directed to sign up page                                                                              | No               |
+| 23   | Log in page                     | Click Sign Up button                                            | Should be directed to sign up page                                                                              | Yes               |
 | 24   | Sign up page                    | Enter first name, surname, email and password and click submit  | User should then be signed up and returned to the log in page to log in.                                        | Yes              |
 | 25   | 404 page                        | Deliberately create an error                                    | Should be directed to 404 page                                                                                  | No               |
 
 ## 5.2 Other tests
 
-Manual Testing 26 - Known issue booktable form is not stoing bookings
+Manual Testing 26 - Known issue booktable form is not storing bookings
 
 Lighthouse results:
 

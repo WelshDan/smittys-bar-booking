@@ -22,7 +22,8 @@ def login_user(request):
         else:
             messages.add_message(request, messages.ERROR,
                 ("Something went wrong, please try again."))
-            return redirect('login')  
+            return redirect('login')
+            
     else:
         return render(request, 'login.html', {})
 
