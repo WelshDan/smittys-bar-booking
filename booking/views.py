@@ -57,8 +57,14 @@ def delete_reservation(request, booking_id):
 
 
 def get_bookings(request):
-    bookings = Reservations.objects.filter(active_booking=True)
-    return render(request, 'booktable.html', {'bookings': bookings})
+    bookings = Reservations.objects.all()
+    is_superuser = request.user.is_superuser
+
+    if not is_superuser:
+        bookings = Reservations.objects.filter(active_booking=True)
+        return render(request, 'booktable.html', {'bookings': bookings})
+    else:
+        return render(request, 'booktable.html', {'bookings': bookings})
 
 
 def get_index(request):
