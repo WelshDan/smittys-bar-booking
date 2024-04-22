@@ -16,12 +16,10 @@ def login_user(request):
         user = authenticate(request, email=email, password=password)
         if user is not None:
             login(request, user)
-            messages.add_message(request, messages.SUCCESS,
-                ("You are now logged in."))
+            messages.success(request, "You are now logged in.")
             return redirect('index')
         else:
-            messages.add_message(request, messages.ERROR,
-                ("Something went wrong, please try again."))
+            messages.error(request, "Something went wrong, please try again.")
             return redirect('login')
             
     else:
@@ -30,8 +28,8 @@ def login_user(request):
 
 def logout_user(request):
     logout(request)
-    messages.add_message(request, messages.INFO,
-        ("You are now logged out"))
+    messages.info(request,
+        "You are now logged out")
     return redirect('index')
 
 
@@ -47,13 +45,11 @@ def signup_user(request):
             # Authentication
             user = authenticate(request, email=email, password=password)
             login(request, user)
-            messages.add_message(request, messages.SUCCESS,
-                ("You are now logged out"))
+            messages.success(request, "You are now logged out")
         return redirect('index')
     else:
         form = RegisterForm()
-        messages.add_message(request, messages.ERROR,
-                ("Something went wrong, please try again."))
+        messages.error(request, "Something went wrong, please try again.")
     return render(request, 'signup.html', {'form': form})
 
 

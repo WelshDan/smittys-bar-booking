@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from django.views.generic.edit import UpdateView, DeleteView
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import Reservations
 from .forms import TableBookingForm
 
@@ -20,9 +21,8 @@ def reserve_table(request):
         form = TableBookingForm(request.POST, user=request.user)
         if form.is_valid():
             form.save()
-            messages.add_message(
-                request, messages.SUCCESS,
-                ("Congratulations you have booked a table. See YOUR RESERVATIONS for details."))
+            messages.success(request,
+                "Congratulations you have booked a table. See YOUR RESERVATIONS for details.")
             return HttpResponseRedirect('/booktable')
     else:
         form = TableBookingForm(user=request.user)
@@ -40,9 +40,7 @@ def edit_reservation(request, booking_id):
         form = TableBookingForm(request.POST, user=request.user, instance=booking)
         if form.is_valid():
             form.save()
-            messages.add_message(
-                request, messages.SUCCESS,
-                ("Your booking has now been updated. See YOUR RESERVATIONS for details."))
+            messages.success(request, "Your booking has now been updated. See YOUR RESERVATIONS for details.")
             return redirect('booktable')
     return render(request, 'edit_reservation.html', {'form':form, 'booking':booking, 'bookings': user_bookings})
 
@@ -50,21 +48,17 @@ def edit_reservation(request, booking_id):
 def delete_reservation(request, booking_id):
     booking = Reservations.objects.get(pk=booking_id)
     booking.delete()
-    messages.add_message(
-        request, messages.SUCCESS,
-        ("Your booking has now been deleted."))
+    messages.success(request, "Your booking has now been deleted.")
     return redirect('booktable')
 
 
+@login_required
 def get_bookings(request):
-    bookings = Reservations.objects.all()
-    is_superuser = request.user.is_superuser
-
-    if not is_superuser:
-        bookings = Reservations.objects.filter(active_booking=True)
-        return render(request, 'booktable.html', {'bookings': bookings})
+    if request.user.is_superuser:
+        bookings = Reservations.objects.all()
     else:
-        return render(request, 'booktable.html', {'bookings': bookings})
+        bookings = Reservations.objects.filter(email=request.user.email, active_booking=True)
+    return render(request, 'booktable.html', {'bookings': bookings})
 
 
 def get_index(request):

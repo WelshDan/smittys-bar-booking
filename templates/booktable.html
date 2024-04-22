@@ -1,11 +1,59 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-{% if user.is_authenticated %}
 
 <!-- ======= Book A Table Section ======= -->
 
 <body>
+    {% if request.user.is_superuser %}
+
+    <section id="active_bookings" class="active_bookings">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>All Reservations</h2>
+                <p>Here are the  reservations:</p>
+                <div class="row col-lg-6 pt-4 pt-lg-0 content">
+                    <table class="table table-sm">
+                        <thead class="t-head">
+                            <tr>
+                                <th>Booking Id</th>
+                                <th>Table Booked</th>
+                                <th>Date Booked</th>
+                                <th>Time booked</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for booking in bookings %}
+                            <tr>
+                                <td>{{ booking.booking_id }}</td>
+                                <td>{{ booking.table_number }}</td>
+                                <td>{{ booking.date }}</td>
+                                <td>{{ booking.start_time }} to {{ booking.end_time }}</td>
+                                <td><a href="{% url 'edit_reservation' booking.booking_id %}">
+                                        <button>Edit</button>
+                                    </a>
+                                </td>
+                                <td><a href="{% url 'delete_reservation' booking.booking_id %}">
+                                        <button>Delete</button>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        {% empty %}
+                        <tr>
+                            <td>No reservations</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% else %}
+        {% if user.is_authenticated %}
     <section id="active_bookings" class="active_bookings">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
@@ -155,6 +203,8 @@
         <h1>You must be logged in to view this page</h1>
         
         {% endif %}
+    
+    {% endif %}
         </body>
         <!-- End Book A Table Section -->
         
