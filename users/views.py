@@ -19,17 +19,15 @@ def login_user(request):
             messages.success(request, "You are now logged in.")
             return redirect('index')
         else:
-            
+            messages.error(request, "Something went wrong, please try again.")
             return redirect('login')
     else:
-        messages.error(request, "Something went wrong, please try again.")
-    return render(request, 'login.html', {})
+        return render(request, 'login.html', {})
 
 
 def logout_user(request):
     logout(request)
-    messages.info(request,
-        "You are now logged out")
+    messages.info(request,"You are now logged out")
     return redirect('index')
 
 
