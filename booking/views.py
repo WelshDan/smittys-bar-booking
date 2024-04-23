@@ -15,7 +15,7 @@ def reserve_table(request):
     submitted = False
     active_booking = False
     form = TableBookingForm()
-    user_bookings = Reservations.objects.filter(email=request.user.email).filter(active_booking=True)
+    user_bookings = Reservations.objects.filter(active_booking=True)
     
     if request.method == "POST":
         form = TableBookingForm(request.POST, user=request.user)
@@ -57,7 +57,7 @@ def get_bookings(request):
     if request.user.is_superuser:
         bookings = Reservations.objects.all()
     else:
-        bookings = Reservations.objects.filter(email=request.user.email, active_booking=True)
+        bookings = Reservations.objects.filter(user=request.user, active_booking=True)
     return render(request, 'booktable.html', {'bookings': bookings})
 
 

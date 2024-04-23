@@ -11,7 +11,7 @@
         <div class="container" data-aos="fade-up">
             <div class="section-title">
                 <h2>All Reservations</h2>
-                <p>Here are the  reservations:</p>
+                <p>Here are the reservations:</p>
                 <div class="row col-lg-6 pt-4 pt-lg-0 content">
                     <table class="table table-sm">
                         <thead class="t-head">
@@ -40,20 +40,19 @@
                                     </a>
                                 </td>
                             </tr>
+                            {% empty %}
+                                <tr>
+                                    <td>No reservations</td>
+                                </tr>
+                            {% endfor %}
                         </tbody>
-                        {% empty %}
-                        <tr>
-                            <td>No reservations</td>
-                        </tr>
-                        {% endfor %}
                     </table>
                 </div>
             </div>
         </div>
     </section>
 
-    {% else %}
-        {% if user.is_authenticated %}
+    {% elif request.user.is_authenticated %}
     <section id="active_bookings" class="active_bookings">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
@@ -87,10 +86,12 @@
                                     </a>
                                 </td>
                             </tr>
+                            {% empty %}
+                                <tr>
+                                    <td>No reservations</td>
+                                </tr>
+                            {% endfor %}
                         </tbody>
-                        {% empty %}
-                        <tr><td>No reservations</td></tr>
-                        {% endfor %}
                     </table>
                 </div>
             </div>
@@ -118,6 +119,12 @@
                 {% endif %}
         </div>
     </section>
+        {% else %}
+            <h1>You must be logged in to view this page</h1>
+        {% endif %}
+    </body>
+    <!-- End Book A Table Section -->
+    {% if request.user.is_authenticated %}
     <section id="event_information" class=" event_information">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
@@ -199,13 +206,7 @@
             </div>
         </div>
     </section>
-        {% else %}
-        <h1>You must be logged in to view this page</h1>
-        
-        {% endif %}
-    
+
     {% endif %}
-        </body>
-        <!-- End Book A Table Section -->
         
-        {% endblock %}
+    {% endblock %}
