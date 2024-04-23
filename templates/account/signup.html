@@ -14,7 +14,7 @@
             <p>{% blocktrans %}Please enter your details{% endblocktrans %}</p>
         </div>
         <div id="signup-form">
-            <form action="{% url 'account_signup' %}" method="POST" role="form" class="php-form aos-init aos animate"
+            <form action="{% url 'account_signup' %}" method="POST" role="form" class="signup-form aos-init aos animate"
                 data-aos="fade-up" data-aos-delay="100">
                 {% csrf_token %}
                 {{ form.as_p }}

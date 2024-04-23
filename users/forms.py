@@ -12,5 +12,5 @@ class RegisterForm(ModelForm):
 
     class Meta:
         model = Customers
-        fields = ['first_name', 'last_name', 'email']
+        fields = ['first_name', 'last_name', 'email', 'password']
 
