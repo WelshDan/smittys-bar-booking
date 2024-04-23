@@ -1697,26 +1697,31 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Sign up Page
+# Sign up / Sign out Pages
 --------------------------------------------------------------*/
-.signup .section-title {
+.signup .section-title,
+.signout .section-title {
     padding-top: 60px;
 }
 
-.signup .bt-signup {
+.signup .bt-signup,
+.signout .bt-signout {
     position: absolute;
     left: 10px;
 }
 
-.signup .signup-form {
+.signup .signup-form,
+.signout .signout-form {
     width: 100%;
 }
 
-.signup .signup-form .form-group {
+.signup .signup-form .form-group,
+.signout .signout-form .form-group {
     padding-bottom: 8px;
 }
 
-.signup .signup-form .validate {
+.signup .signup-form .validate,
+.signout .signout-form .validate {
     display: none;
     color: red;
     margin: 0 0 15px 0;
@@ -1724,7 +1729,8 @@ section {
     font-size: 13px;
 }
 
-.signup .signup-form .error-message {
+.signup .signup-form .error-message,
+.signout .signout-form .error-message {
     display: none;
     color: #fff;
     background: #ed3c0d;
@@ -1733,11 +1739,13 @@ section {
     font-weight: 600;
 }
 
-.signup .signup-form .error-message br+br {
+.signup .signup-form .error-message br+br,
+.signout .signout-form .error-message br+br {
     margin-top: 25px;
 }
 
-.signup .signup-form .sent-message {
+.signup .signup-form .sent-message,
+.signout .signout-form .sent-message {
     display: none;
     color: #fff;
     background: #18d26e;
@@ -1746,13 +1754,15 @@ section {
     font-weight: 600;
 }
 
-.signup .signup-form .loading {
+.signup .signup-form .loading,
+.signout .signout-form .loading {
     display: none;
     text-align: center;
     padding: 15px;
 }
 
-.signup .signup-form .loading:before {
+.signup .signup-form .loading:before,
+.signout .signout-form .loading:before {
     content: "";
     display: inline-block;
     border-radius: 50%;
@@ -1765,7 +1775,9 @@ section {
 }
 
 .signup .signup-form input,
-.signup .signup-form textarea {
+.signup .signup-form textarea,
+.signout .signout-form input,
+.signout .signout-form textarea {
     border-radius: 0;
     box-shadow: none;
     font-size: 14px;
@@ -1775,29 +1787,38 @@ section {
 }
 
 .signup .losignupgin-form input::-moz-placeholder,
-.signup .signup-form textarea::-moz-placeholder {
+.signup .signup-form textarea::-moz-placeholder,
+.signout .losignupgin-form input::-moz-placeholder,
+.signout .signout-form textarea::-moz-placeholder {
     color: #a49b89;
 }
 
 .signup .signup-form input::placeholder,
-.signup .signup-form textarea::placeholder {
+.signup .signup-form textarea::placeholder,
+.signout .signout-form input::placeholder,
+.signout .signout-form textarea::placeholder {
     color: #a49b89;
 }
 
 .signup .signup-form input:focus,
-.signup .signup-form textarea:focus {
+.signup .signup-form textarea:focus,
+.signout .signout-form input:focus,
+.signout .signout-form textarea:focus {
     border-color: #cda45e;
 }
 
-.signup .signup-form input {
+.signup .signup-form input,
+.signout .signout-form input {
     height: 44px;
 }
 
-.signup .signup-form textarea {
+.signup .signup-form textarea,
+.signout .signout-form textarea {
     padding: 10px 12px;
 }
 
-.signup .signup-form button[type=submit] {
+.signup .signup-form button[type=submit],
+.signout .signout-form button[type=submit] {
     background: #cda45e;
     border: 0;
     padding: 10px 35px;
@@ -1806,13 +1827,15 @@ section {
     border-radius: 50px;
 }
 
-.signup .signup-form button[type=submit]:hover {
+.signup .signup-form button[type=submit]:hover,
+.signout .signout-form button[type=submit]:hover {
     background: #d3af71;
 }
 
 .signup .btn-login,
 .signup .btn-signup,
-.signup .btn-booktable {
+.signup .btn-booktable,
+.signout .btn-signout {
     font-weight: 600;
     font-size: 13px;
     letter-spacing: 0.5px;
@@ -1828,7 +1851,8 @@ section {
 
 .login .btn-login:hover,
 .login .btn-signup:hover,
-.login .btn-booktable:hover {
+.login .btn-booktable:hover,
+.login .btn-signout:hover {
     background: #cda45e;
     color: #fff;
 }
