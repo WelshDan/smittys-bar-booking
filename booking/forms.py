@@ -1,17 +1,13 @@
 from django import forms
 from booking.models import Reservations
 from users.models import Customers
+from .widgets import DatePickerInput, TimePickerInput, DateTimePickerInput
 
 class TableBookingForm(forms.ModelForm):
     email = forms.EmailField()
-    date = forms.DateField(
-        widget=forms.DateInput(
-            attrs={
-                'type':'date'
-            })
-    )
-    start_time = forms.TimeField(input_formats=['%H:%M'])
-    end_time = forms.TimeField(input_formats=['%H:%M'])
+    date = forms.DateField(widget=DatePickerInput)
+    start_time = forms.TimeField(widget=TimePickerInput)
+    end_time = forms.TimeField(widget=TimePickerInput)
 
     class Meta:
         model = Reservations
