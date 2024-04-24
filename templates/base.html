@@ -168,21 +168,19 @@
       
     <!-- ======= Error Messages ======= -->
     
-    <section id="section-title" class="messages">
-      <div class="messages-container">
-        <div class="row">
-          <div class="col-m8- offset-md-2">
-            {% for message in messages %}
-            <div class"alert alert-warning alert-dismissible fade show" id="msg" role="alert">
-              {{ message | safe }}
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-              </button>
-            </div>
-            {% endfor %}
+    <div class="messages-container">
+      <div class="row">
+        <div class="col-m8- offset-md-2">
+          {% for message in messages %}
+          <div class"alert alert-warning alert-dismissible fade show" id="msg" role="alert">
+            {{ message | safe }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            </button>
           </div>
+          {% endfor %}
         </div>
       </div>
-    </section>
+    </div>
 
     {% block content %}
     <!-- Content Goes here -->

@@ -18,3 +18,13 @@ class TableBookingForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         if user and user.is_authenticated:
             self.fields['email'].initial = user.email
+
+    def clean(self):
+        cleaned_data = super(TableBookingForm, self).clean()
+        table_number = cleaned_data.get('table_number')
+        date = cleaned_data.get('date')
+        time = cleaned_data.get('time')
+        if Reservations.objects.filter(table=table, date=date, time=time, active_booking=True).exists():
+            raise ValidationError("This table is already booked for that date and time")
+
+        return cleaned_data

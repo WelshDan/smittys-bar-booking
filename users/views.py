@@ -4,8 +4,10 @@ from django.contrib import messages
 from .forms import RegisterForm
 from django.contrib.auth.forms import UserCreationForm
 
+
 def error_404_view(request, exception):
     return render(request, '404.html')
+
 
 def login_user(request):
     # Check if logging in
@@ -35,16 +37,19 @@ def signup_user(request):
     if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
+            email = form.cleaned_data['email']
+            if User.objects.filter(email=email).exists():
+                messages.error(request, "This email is already registered.")
+        else:
             form.save()
             first_name = form.cleaned_data['first_name']
             last_name = form.cleaned_data['last_name']
-            email = form.cleaned_data['email']
             password = form.cleaned_data['password']
             # Authentication
             user = authenticate(request, email=email, password=password)
             login(request, user)
-            messages.success(request, "You are now logged out")
-        return redirect('index')
+            messages.success(request, "You are now signed up and logged in")
+            return redirect('index')
     else:
         form = RegisterForm()
         messages.error(request, "Something went wrong, please try again.")

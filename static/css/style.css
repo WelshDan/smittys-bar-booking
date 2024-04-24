@@ -36,17 +36,6 @@ h6 {
 #messages-container {
     position: relative;
     padding-top: 50px;
-    width: 100%;
-    height: 50px;
-    top: 30vh;
-    right: 10px;
-    display: none;
-    z-index: 100;
-    color: #fff;
-    background: #ed3c0d;
-    text-align: center;
-    padding: 15px;
-    font-weight: 600;
 }
 
 /*--------------------------------------------------------------

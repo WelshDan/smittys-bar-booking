@@ -463,3 +463,7 @@ MESSAGE_TAGS = {
         messages.ERROR: 'alert-danger',
 
     }
+
+added widgets file for timepicker
+
+[cleaning data in forms](https://www.youtube.com/watch?v=MUtc0pAF6b8)
