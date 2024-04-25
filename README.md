@@ -77,6 +77,14 @@ This flowchart was created to show a simplified version of the main pages involv
 
 ![Screenshot](static/img/README/smittys_flowchart.png "Flowchart plan of the website layout")
 
+Wireframe - mobile
+
+![Screenshot](static/img/README/mobile_wireframe.jpg "Initial wireframe of mobile design")
+
+Wireframe - desktop
+
+![Screenshot](static/img/README/desktop_wireframe.jpg "Initial wireframe of desktop design")
+
 #### 2.2 User Stories
 
 **Programmer**
@@ -168,11 +176,11 @@ Drinks:
 Events:
 ![Screenshot](static/img/README/events_navbar.jpg "Events section of the main page")
 
-Gallery:
+The Gallery:
 ![Screenshot](static/img/README/gallery_navbar.jpg "Gallery section of the main page")
 
 Contact Us:
-![Screenshot](static/img/README/index8.jpg "Contact section of the main page")
+![Screenshot](static/img/README/contactus_navbar.jpg "Contact section of the main page")
 
 **Footer section**
 
