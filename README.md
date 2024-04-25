@@ -208,10 +208,6 @@ username: admin
 email: admin@email.com
 Password: admin
 
-Email Smittys Bar:
-email: testemailsmittysbar@gmail.com
-password: SmittysBar:2023
-
 Test User:
 tom@gmail.com / Tom:2024
 sam@gmail.com / Sam:2024
@@ -244,7 +240,26 @@ The following have been used during this website:
 
 ## 4. Important code functions<br/>
 
-#### 4.1 Python functions<br/>
+#### 4.1 Python classes and functions<br/>
+
+The key custom classes for this project are as:
+
+- Reservations (booking/models.py)
+This class creates the basis of the booking function of booktable.
+
+- TableBookingForm (booking/forms.py)
+This form class provides the structure of the booking function incuding validation checks as well as setting the date and time choices using the DatePickerInput and TimePickerInput.
+
+The key custom functions for this project are:
+
+- reserve_table (booking/views.py)
+This function receives the information of the TableBookingForm and checks against duplicate bookings then stores the bookings in  Reservations
+
+- get_bookings (booking/views.py)
+This function enables a list of own active bookings to be shown to the user. Superusers should see a list of ALL bookings
+
+- edit_reservation (booking/views.py)
+This function is connected to the get_bookings function and enables the user to edit or delete their bookings.
 
 #### 4.2 Python start code<br/>
 
@@ -299,6 +314,10 @@ Lighthouse results:
 - Origin checking failed - does not match any trusted origins
 [Add "CSRF_TRUSTED_ORIGINS =" to settings](https://stackoverflow.com/questions/38841109/csrf-validation-does-not-work-on-django-using-https)
 Changed to workspace link, then it should be changed to deloyed link address
+- PSQL database function not connected to booktable form (FIXED)
+- Table booking function on 'booktable.html' does not store information (FIXED)
+- There are styling inconsistencies on both 'login' and 'signup' pages (FIXED)
+- Drinks section of index. links not rotatable
 
 #### 6.2 Unresolved issues
 
@@ -312,12 +331,9 @@ Changed to workspace link, then it should be changed to deloyed link address
 
 There are many missing parts to the website:
 
-- PSQL database function not connected to booktable form
-- Table booking function on 'booktable.html' does not store information
 - (Manual Testing #18) The Contact US form is not connected
-- The style.css file contains code that is not used and maybe even isn't connected.
-- There are styling inconsistencies on the 'login.html' page
-- drinks section of index. links not rotatable
+- Due to a template website used for this, the style.css file contains code that is not used or not connected.
+- Wireframes are not
 
 #### 6.3 Possible future developments
 
