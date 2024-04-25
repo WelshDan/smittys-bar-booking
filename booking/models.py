@@ -54,7 +54,8 @@ TABLE_NUMBERS = (
 
 class Reservations(models.Model):
     now = timezone.now()
-    email = models.EmailField(Customers, default="", null=False, blank=False)
+    user = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
+    email = models.CharField(default="")
     booking_id = models.AutoField(primary_key=True)
     table_number = models.CharField(
         max_length=20,
@@ -65,10 +66,5 @@ class Reservations(models.Model):
     end_time = models.TimeField(default=now.hour)
     active_booking = models.BooleanField(default=True)
 
-    def save(self, *args, **kwargs):
-        if not self.email:
-            self.email = self.user.email
-        super().save(*args, **kwargs)
-
     def __str__(self):
-        return f"Reservation #{self.booking_id} - Email {self.email} Table No {self.table_number} - Date {self.date} - From {self.start_time} - Till {self.end_time} - Active? {self.active_booking}"
+        return f"Reservation #{self.booking_id} - Email {self.user.email} Table No {self.table_number} - Date {self.date} - From {self.start_time} - Till {self.end_time} - Active? {self.active_booking}"

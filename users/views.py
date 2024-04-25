@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import RegisterForm
 from django.contrib.auth.forms import UserCreationForm
+from django.core.exceptions import ValidationError
 
 
 def error_404_view(request, exception):
@@ -14,14 +15,18 @@ def login_user(request):
     if request.method == "POST":
         email = request.POST["email"]
         password = request.POST["password"]
-        # Authentication
-        user = authenticate(request, email=email, password=password)
-        if user is not None:
-            login(request, user)
-            messages.success(request, "You are now logged in.")
-            return redirect('index')
-        else:
-            messages.error(request, "Something went wrong, please try again.")
+
+        try:
+            # Authentication
+            user = authenticate(request, email=email, password=password)
+            if user is not None:
+                login(request, user)
+                messages.success(request, "You are now logged in.")
+                return redirect('index')
+            else:
+                raise ValidationError("Your email or password was incorrect, please try again.")
+        except ValidationError as e:
+            messages.error(request, e.message)
             return redirect('login')
     else:
         return render(request, 'login.html', {})
@@ -40,16 +45,16 @@ def signup_user(request):
             email = form.cleaned_data['email']
             if User.objects.filter(email=email).exists():
                 messages.error(request, "This email is already registered.")
-        else:
-            form.save()
-            first_name = form.cleaned_data['first_name']
-            last_name = form.cleaned_data['last_name']
-            password = form.cleaned_data['password']
-            # Authentication
-            user = authenticate(request, email=email, password=password)
-            login(request, user)
-            messages.success(request, "You are now signed up and logged in")
-            return redirect('index')
+            else:
+                form.save()
+                first_name = form.cleaned_data['first_name']
+                last_name = form.cleaned_data['last_name']
+                password = form.cleaned_data['password']
+                # Authentication
+                user = authenticate(request, email=email, password=password)
+                login(request, user)
+                messages.success(request, "You are now signed up and logged in")
+                return redirect('index')
     else:
         form = RegisterForm()
         messages.error(request, "Something went wrong, please try again.")

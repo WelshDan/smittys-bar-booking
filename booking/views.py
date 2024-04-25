@@ -57,7 +57,7 @@ def get_bookings(request):
     if request.user.is_superuser:
         bookings = Reservations.objects.all()
     else:
-        bookings = Reservations.objects.filter(email=request.user.email, active_booking=True)
+        bookings = Reservations.objects.filter(email=request.user.email).filter(active_booking=True)
     return render(request, 'booktable.html', {'bookings': bookings})
 
 

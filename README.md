@@ -428,13 +428,6 @@ Tutor Support: Gemma, Sean, Roman and John
 - installed pipreqs to only use reqs that are necessary
 - installed piptools to combine
 
-[adding datetimepicker] (<https://pypi.org/project/django-bootstrap-datepicker-plus>)
-- added datepicker using pip install django-bootstrap-datepicker-plus
-- install pip install django-bootstrap-v5
-
-[adding datetimepicker usage](https://django-bootstrap-datepicker-plus.readthedocs.io/en/latest/Usage.html#model-form-usage)
-- installed pip install django-crispy-forms to run datetimepicker
-
 [datetime](https://stackoverflow.com/questions/2029295/django-datefield-default-options)
 installing db in postgresql using Code Institute module [Database Management Systems](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+DB101+2021_T1/courseware/c0c31790fcf540539fd2bd3678b12406/87ffa16374c74c55b202724586a834c9/?child=last)
 
